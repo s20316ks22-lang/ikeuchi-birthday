@@ -40,9 +40,9 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 .bd-toc-list .num{font-size:11px;color:#c8593a;font-weight:500;min-width:18px}
 
 /* ===== ヒーロー ===== */
-.bd-hero{display:grid;grid-template-columns:1fr 1fr;min-height:400px;margin:0}
+.bd-hero{display:grid;grid-template-columns:1fr 1fr;margin:0}
 @media(max-width:700px){.bd-hero{grid-template-columns:1fr}}
-.bd-hero-text{background:#fff;padding:72px 48px 72px 32px;display:flex;flex-direction:column;justify-content:center}
+.bd-hero-text{background:#fff;padding:80px 48px 72px 40px;display:flex;flex-direction:column;justify-content:flex-end}
 @media(max-width:700px){.bd-hero-text{padding:48px 20px 40px}}
 .bd-hero-en{font-size:10px;letter-spacing:.5em;color:#c8593a;font-weight:400;text-transform:uppercase;margin-bottom:16px}
 .bd-hero-h1{font-size:clamp(20px,2.4vw,32px);font-weight:300;line-height:1.6;letter-spacing:.02em;color:#1a1a1a;margin-bottom:20px}
@@ -53,7 +53,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 .bd-btn-fill:hover{background:#333}
 .bd-btn-line{padding:14px 30px;background:transparent;color:#1a1a1a;font-family:inherit;font-size:12px;letter-spacing:.14em;border:1px solid #1a1a1a;cursor:pointer;font-weight:400;transition:all .2s;text-decoration:none;display:inline-block}
 .bd-btn-line:hover{background:#1a1a1a;color:#fff}
-.bd-hero-img{background:#f5f2eb;display:flex;align-items:center;justify-content:center;min-height:320px;position:relative;overflow:hidden}
+.bd-hero-img{background:#f5f2eb;display:flex;align-items:center;justify-content:center;min-height:480px;position:relative;overflow:hidden}
 .bd-hero-img img{width:100%;height:100%;object-fit:cover;display:block}
 .bd-hero-img-ph{text-align:center;color:#b8b4ae;padding:40px}
 .bd-hero-img-ph span{font-size:52px;display:block;margin-bottom:10px}
@@ -264,15 +264,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 .bd-faq-item.open .bd-faq-a{display:block}
 
 /* ===== CTAバンド ===== */
-.bd-cta{background:#1a1a1a;padding:80px 32px;text-align:center}
-.bd-cta-en{font-size:10px;letter-spacing:.5em;color:rgba(255,255,255,.3);text-transform:uppercase;margin-bottom:16px;display:block}
-.bd-cta-title{font-size:clamp(22px,3vw,34px);font-weight:300;color:#fff;line-height:1.6;letter-spacing:.04em;margin-bottom:14px}
-.bd-cta-sub{font-size:13px;color:rgba(255,255,255,.4);line-height:2;font-weight:300;margin-bottom:48px;max-width:400px;margin-left:auto;margin-right:auto}
+.bd-cta{background:#f5f2eb;padding:80px 32px;text-align:center}
+.bd-cta-en{font-size:10px;letter-spacing:.5em;color:#c8593a;text-transform:uppercase;margin-bottom:16px;display:block}
+.bd-cta-title{font-size:clamp(22px,3vw,34px);font-weight:300;color:#1a1a1a;line-height:1.6;letter-spacing:.04em;margin-bottom:14px}
+.bd-cta-sub{font-size:13px;color:#888;line-height:2;font-weight:300;margin-bottom:48px;max-width:440px;margin-left:auto;margin-right:auto}
 .bd-cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-.bd-btn-fill-wh{padding:15px 36px;background:#fff;color:#1a1a1a;font-family:inherit;font-size:12px;letter-spacing:.16em;border:none;cursor:pointer;font-weight:400;transition:opacity .2s;text-decoration:none;display:inline-block}
-.bd-btn-fill-wh:hover{opacity:.88}
-.bd-btn-line-wh{padding:15px 36px;background:transparent;color:rgba(255,255,255,.55);font-family:inherit;font-size:12px;letter-spacing:.12em;border:1px solid rgba(255,255,255,.3);cursor:pointer;font-weight:300;text-decoration:none;display:inline-block;transition:all .2s;margin-top:0}
-.bd-btn-line-wh:hover{color:#fff;border-color:#fff}
+.bd-btn-fill-wh{padding:15px 36px;background:#1a1a1a;color:#fff;font-family:inherit;font-size:12px;letter-spacing:.16em;border:none;cursor:pointer;font-weight:400;transition:background .2s;text-decoration:none;display:inline-block}
+.bd-btn-fill-wh:hover{background:#c8593a}
+.bd-btn-line-wh{padding:15px 36px;background:#fff;color:#1a1a1a;font-family:inherit;font-size:12px;letter-spacing:.12em;border:1px solid #1a1a1a;cursor:pointer;font-weight:400;text-decoration:none;display:inline-block;transition:all .2s;margin-top:0}
+.bd-btn-line-wh:hover{background:#1a1a1a;color:#fff}
 
 /* ===== 画像帯（フォトバンド） ===== */
 .bd-photo-band {
@@ -389,9 +389,10 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 .bd-img-text.reverse { direction: rtl; }
 .bd-img-text.reverse > * { direction: ltr; }
 .bd-img-text-img {
-  aspect-ratio: 4/3;
   overflow: hidden;
   background: #f5f2eb;
+  align-self: start;
+  aspect-ratio: 1/1;
 }
 .bd-img-text-img img {
   width: 100%; height: 100%;
@@ -716,12 +717,17 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   }
   .bd-cta-btns {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    padding: 0 4px;
   }
   .bd-btn-fill-wh, .bd-btn-line-wh {
     width: 100%;
+    max-width: none;
     text-align: center;
-    max-width: 320px;
+    box-sizing: border-box;
+    padding: 15px 20px;
   }
 
   /* カートへの進み方ステップ */
@@ -729,19 +735,138 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
     margin-bottom: 32px;
   }
 }
+
+/* ===== ページトップへ戻る ===== */
+.bd-totop{position:fixed;right:20px;bottom:24px;width:46px;height:46px;background:#c8593a;color:#fff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:900;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;box-shadow:0 3px 12px rgba(200,89,58,.35)}
+.bd-totop.show{opacity:1;visibility:visible}
+.bd-totop:hover{background:#1a1a1a}
+@media(max-width:640px){.bd-totop{right:14px;bottom:18px;width:42px;height:42px}}
+
+/* ===== お客様の声 ===== */
+.bd-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:700px){.bd-reviews{grid-template-columns:1fr}}
+.bd-review{background:#fff;border:1px solid #e8e4dc;border-radius:4px;padding:26px 24px;display:flex;flex-direction:column}
+.bd-review-stars{color:#c8a13a;font-size:13px;letter-spacing:2px;margin-bottom:12px}
+.bd-review-text{font-size:12.5px;color:#444;line-height:2;font-weight:300;flex:1;margin-bottom:16px}
+.bd-review-meta{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #f0ede6}
+.bd-review-avatar{width:34px;height:34px;border-radius:50%;background:#f5f2eb;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.bd-review-name{font-size:11px;color:#1a1a1a;font-weight:500}
+.bd-review-attr{font-size:10px;color:#aaa;font-weight:300}
+
+/* ===== スマホ追加修正：ボタンずれ・改行 ===== */
+@media (max-width: 640px) {
+
+  /* PC用の文中改行はスマホでは解除（自然な折り返しにする） */
+  .bd-hero-sub br,
+  .bd-ttl p br,
+  .bd-img-text-p br,
+  .bd-card-desc br,
+  .bd-rank-reason br,
+  .bd-reason-desc br,
+  .bd-emb-text br,
+  .bd-cta-sub br,
+  .bd-milestone-desc br,
+  .bd-review-text br { display: none; }
+
+  /* GIFT STORYのボタン：右寄せ→中央に */
+  .bd-img-text-body a[onclick*="bd-finder"] {
+    align-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 刺繍ボタン中央 */
+  .bd-emb-body a.bd-btn-fill {
+    align-self: center !important;
+    margin: 8px auto 0 !important;
+  }
+
+  /* 商品カード・ランキングのボタンを統一 */
+  .bd-card-btn,
+  .bd-rank-btn {
+    width: 85% !important;
+    margin: 14px auto 0 !important;
+    padding: 11px 0 !important;
+    font-size: 12px !important;
+  }
+
+  /* 予算テーブル：縦積みに再構成 */
+  #bd-budget > div > div[style*="grid-template-columns"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #bd-budget div[style*="min-height:72px"] {
+    min-height: 52px !important;
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e8e4dc;
+  }
+  #bd-budget div[style*="padding:20px 24px"] {
+    padding: 16px 18px 8px !important;
+  }
+  #bd-budget div[style*="text-align:center"][style*="display:flex"] {
+    padding: 0 18px 18px !important;
+    justify-content: flex-start !important;
+  }
+  #bd-budget div[style*="text-align:center"][style*="display:flex"] a {
+    padding: 0;
+    display: inline-block;
+  }
+
+  /* 節目のリンク位置 */
+  .bd-milestone-link { display: inline-block; margin-top: 4px; }
+
+  /* 目次リンクのタップ領域 */
+  .bd-toc-list a { padding: 15px 12px; }
+
+  /* CTAギャラリーの余白 */
+  .bd-cta .bd-gallery-wrap { margin: 0 -20px !important; }
+
+  /* カードセレクターのコピーボタン全幅 */
+  .bd-copy-btn { width: 100%; text-align: center; padding: 13px 0; }
+
+  /* FAQアイコンの位置 */
+  .bd-faq-icon { margin-top: 0; }
+}
+
+@media (max-width: 640px) {
+  .bd-cta .bd-gallery-wrap .bd-gallery-item { height: 200px; }
+  .bd-gallery-btn { width: 36px; height: 36px; font-size: 16px; }
+  .bd-gallery-btn.prev { left: 10px; }
+  .bd-gallery-btn.next { right: 10px; }
+  .bd-gallery-item-label { bottom: 12px; left: 12px; font-size: 10px; padding: 5px 10px; max-width: 70%; }
+}
+
+
+
+/* ===== 選び方カード：ホバー ===== */
+.bd-howto-card {
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s, transform .18s;
+}
+.bd-howto-card.hovered {
+  background: #f5f2eb !important;
+  box-shadow: 0 6px 20px rgba(200,89,58,.15) !important;
+  transform: translateY(-3px);
+}
+.bd-howto-card.hovered .bd-howto-link {
+  color: #c8593a !important;
+}
 </style>
 
 <div class="bd" style="overflow-x:hidden">
 
 <!-- ===== HERO ===== -->
+<div style="background:#fff;height:48px"></div>
 <div class="bd-hero">
   <div class="bd-hero-text">
     <div class="bd-hero-en">BIRTHDAY GIFT</div>
-    <h1 class="bd-hero-h1">誕生日に、<br>一生使えるタオルを<strong>贈る。</strong></h1>
-    <p class="bd-hero-sub">年齢・関係・予算から選べる。<br>オーガニックコットン100%、日常を上質にする贈り物。<br>名入れ刺繍でパーソナルな一品に。</p>
+    <h1 class="bd-hero-h1">誕生日に、一生使える<br>今治タオルを<strong>贈る。</strong></h1>
+    <p class="bd-hero-sub">タオルは、すべての人が毎日使うもの。だから誕生日プレゼントに選んで、必ず喜ばれます。<br>オーガニックコットン100%・今治製。IKEUCHI ORGANICにしか作れないタオルを贈りましょう。<br>名入れ刺繍を添えれば、世界に一枚だけのギフトになります。</p>
     <div class="bd-hero-btns">
-      <a class="bd-btn-fill" href="#bd-finder">プレゼントを探す</a>
-      <a class="bd-btn-line" href="#bd-card">カードを選ぶ</a>
+      <a class="bd-btn-fill" onclick="bdScrollTo(event,'bd-finder')" style="cursor:pointer">プレゼントを探す</a>
+      <a class="bd-btn-line" onclick="bdScrollTo(event,'bd-card')" style="cursor:pointer">カードを選ぶ</a>
     </div>
   </div>
   <div class="bd-hero-img">
@@ -755,14 +880,14 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-toc">
   <div class="bd-toc-title">CONTENTS</div>
   <ul class="bd-toc-list">
-    <li><a href="#bd-howto"><span class="num">1</span>誕生日プレゼントの選び方</a></li>
-    <li><a href="#bd-milestone"><span class="num">2</span>節目の誕生日におすすめのギフト</a></li>
-    <li><a href="#bd-finder"><span class="num">3</span>贈る相手別 誕生日プレゼント</a></li>
-    <li><a href="#bd-budget"><span class="num">4</span>予算別 おすすめ誕生日ギフト</a></li>
-    <li><a href="#bd-ranking"><span class="num">5</span>人気の誕生日プレゼントランキング</a></li>
-    <li><a href="#bd-emb"><span class="num">6</span>名入れ・刺繍で世界にひとつだけのギフト</a></li>
-    <li><a href="#bd-reason"><span class="num">7</span>IKEUCHI ORGANICが選ばれる理由</a></li>
-    <li><a href="#bd-faq"><span class="num">8</span>よくある質問</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-howto')" style="cursor:pointer"><span class="num">1</span>誕生日プレゼントの選び方</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-milestone')" style="cursor:pointer"><span class="num">2</span>節目の誕生日におすすめのギフト</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-finder')" style="cursor:pointer"><span class="num">3</span>贈る相手別 誕生日プレゼント</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-budget')" style="cursor:pointer"><span class="num">4</span>予算で選ぶ、おすすめの誕生日ギフト</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-ranking')" style="cursor:pointer"><span class="num">5</span>人気の誕生日プレゼントランキング</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-emb')" style="cursor:pointer"><span class="num">6</span>名入れ・刺繍で世界にひとつだけのギフト</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-reason')" style="cursor:pointer"><span class="num">7</span>IKEUCHI ORGANICが選ばれる理由</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-faq')" style="cursor:pointer"><span class="num">8</span>よくある質問</a></li>
   </ul>
 </div>
 
@@ -770,24 +895,24 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-sec" id="bd-howto">
   <div class="bd-ttl">
     <span class="en">HOW TO CHOOSE</span>
-    <h2>誕生日プレゼントの選び方</h2>
-    <p>贈る相手・年代・予算の3つを決めると、ぴったりのギフトが見つかります。</p>
+    <h2>誕生日プレゼントの選び方<br><span style="font-size:14px;color:#888;font-weight:300">〜今治タオル・オーガニックタオルの選び方〜</span></h2>
+    <p>毎日みんなが使うタオルは、お誕生日のプレゼントにぴったり！「絶対に喜ばれるギフト」として大人気です。<br>選び方はとってもカンタン。「贈る相手・年齢・ご予算」の3つを選ぶだけで、とっておきの今治タオルギフトをご提案します。</p>
   </div>
   <div class="bd-accent-line"></div>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e8e4dc;border:1px solid #e8e4dc;border-radius:4px;overflow:hidden">
-    <div style="background:#fff;padding:32px 24px;text-align:center">
+    <div class="bd-howto-card" style="background:#fff;padding:32px 24px;text-align:center;transition:background .2s,box-shadow .2s,transform .18s" onmouseenter="this.style.background='#f5f2eb';this.style.boxShadow='0 6px 20px rgba(200,89,58,.15)';this.style.transform='translateY(-3px)';var a=this.querySelector('.bd-howto-link');if(a)a.style.color='#c8593a'" onmouseleave="this.style.background='#fff';this.style.boxShadow='';this.style.transform='';var a=this.querySelector('.bd-howto-link');if(a)a.style.color='#1a1a1a'">
       <div style="font-size:30px;margin-bottom:12px">🎯</div>
-      <div style="font-size:14px;font-weight:500;margin-bottom:8px;letter-spacing:.04em">誰に贈る？</div>
+      <div style="font-size:14px;font-weight:500;margin-bottom:8px;letter-spacing:.04em"><a onclick="bdScrollTo(event,'bd-finder')" style="cursor:pointer;color:#1a1a1a;text-decoration:none" class="bd-howto-link">誰に贈る？ →</a></div>
       <div style="font-size:12px;color:#888;line-height:1.9;font-weight:300">お母さん・パートナー・<br>友人・職場の方など<br>関係性で絞り込めます</div>
     </div>
-    <div style="background:#fff;padding:32px 24px;text-align:center">
+    <div class="bd-howto-card" style="background:#fff;padding:32px 24px;text-align:center;transition:background .2s,box-shadow .2s,transform .18s" onmouseenter="this.style.background='#f5f2eb';this.style.boxShadow='0 6px 20px rgba(200,89,58,.15)';this.style.transform='translateY(-3px)';var a=this.querySelector('.bd-howto-link');if(a)a.style.color='#c8593a'" onmouseleave="this.style.background='#fff';this.style.boxShadow='';this.style.transform='';var a=this.querySelector('.bd-howto-link');if(a)a.style.color='#1a1a1a'">
       <div style="font-size:30px;margin-bottom:12px">🔢</div>
-      <div style="font-size:14px;font-weight:500;margin-bottom:8px;letter-spacing:.04em">何歳のお祝い？</div>
+      <div style="font-size:14px;font-weight:500;margin-bottom:8px;letter-spacing:.04em"><a onclick="bdScrollTo(event,'bd-milestone')" style="cursor:pointer;color:#1a1a1a;text-decoration:none" class="bd-howto-link">何歳のお祝い？ →</a></div>
       <div style="font-size:12px;color:#888;line-height:1.9;font-weight:300">節目（20歳・還暦など）か<br>毎年のお祝いかによって<br>おすすめが変わります</div>
     </div>
-    <div style="background:#fff;padding:32px 24px;text-align:center">
+    <div class="bd-howto-card" style="background:#fff;padding:32px 24px;text-align:center;transition:background .2s,box-shadow .2s,transform .18s" onmouseenter="this.style.background='#f5f2eb';this.style.boxShadow='0 6px 20px rgba(200,89,58,.15)';this.style.transform='translateY(-3px)';var a=this.querySelector('.bd-howto-link');if(a)a.style.color='#c8593a'" onmouseleave="this.style.background='#fff';this.style.boxShadow='';this.style.transform='';var a=this.querySelector('.bd-howto-link');if(a)a.style.color='#1a1a1a'">
       <div style="font-size:30px;margin-bottom:12px">💰</div>
-      <div style="font-size:14px;font-weight:500;margin-bottom:8px;letter-spacing:.04em">予算は？</div>
+      <div style="font-size:14px;font-weight:500;margin-bottom:8px;letter-spacing:.04em"><a onclick="bdScrollTo(event,'bd-budget')" style="cursor:pointer;color:#1a1a1a;text-decoration:none" class="bd-howto-link">予算は？ →</a></div>
       <div style="font-size:12px;color:#888;line-height:1.9;font-weight:300">¥3,000〜¥30,000以上まで<br>幅広く対応。<br>予算別に絞り込めます</div>
     </div>
   </div>
@@ -803,10 +928,17 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
     <span class="bd-img-text-en">GIFT STORY</span>
     <h2 class="bd-img-text-h">「消耗品」ではなく<br>「思い出に残る一品」を。</h2>
     <p class="bd-img-text-p">
-      毎年使い捨てられるタオルではなく、洗うほどにふっくら育つ本物のタオルを。<br>
-      誕生日という節目に、5年後も10年後も手元に残る贈り物を届けましょう。
+      せっかくの誕生日だから、<br>
+      毎日使えて、ずっと愛されるものを贈りたい。<br>
+      世界でもめずらしい、<br>
+      風力発電の力で織られたオーガニックコットン100%のタオル。<br>
+      IKEUCHI ORGANICの今治タオルは、使えば使うほど、<br>
+      ふっくらと愛おしく育っていきます。<br>
+      「これ、本当に気持ちいいんだよ」<br>
+      5年後も10年後も、そう言いながら使ってもらえる。<br>
+      そんな、暮らしに溶け込むプレゼントです。
     </p>
-    <a href="#bd-finder" style="display:inline-block;padding:6px 16px;background:#1a1a1a;color:#fff;font-size:11px;letter-spacing:.06em;text-decoration:none;font-family:inherit;font-weight:400;align-self:flex-end;margin-left:auto">ギフトを探す</a>
+    <a onclick="bdScrollTo(event,'bd-finder')" style="cursor:pointer;display:inline-block;padding:6px 16px;background:#1a1a1a;color:#fff;font-size:11px;letter-spacing:.06em;text-decoration:none;font-family:inherit;font-weight:400;align-self:flex-end;margin-left:auto">ギフトを探す</a>
   </div>
 </div>
 
@@ -816,8 +948,8 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   <div style="max-width:1080px;margin:0 auto;padding:0 32px">
   <div class="bd-ttl">
     <span class="en">MILESTONE BIRTHDAY</span>
-    <h2>節目の誕生日におすすめのギフト</h2>
-    <p>特別な年齢の誕生日には、その節目にふさわしい上質な贈り物を。</p>
+    <h2>節目の誕生日に<br>おすすめのギフト</h2>
+    <p>タオルは、だれもが毎日使い、心地よく一生寄り添えるもの。<br>だからこそ、人生のたいせつな節目の誕生日プレゼントにぴったりです。<br>初めての1歳のお誕生日（初誕生日）から、成人祝い、そして還暦や古希、喜寿、米寿、白寿といった大切な長寿のお祝いまで。<br>0歳から99歳まで、すべての世代の方へ。<br>今治のオーガニックタオル専門ブランド「IKEUCHI ORGANIC」が、大切なあの人の肌にそっと寄り添う、とっておきの1枚をご提案します。</p>
   </div>
   <div class="bd-accent-line"></div>
   <div class="bd-milestone-list">
@@ -828,10 +960,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-milestone-age">0〜1歳</div>
         <div class="bd-milestone-name">FIRST BIRTHDAY</div>
         </div>
+        <!-- ▼ 0〜1歳の写真：src="" に画像URLを入れると表示されます -->
+        <div class="bd-milestone-photo" style="width:100%;aspect-ratio:4/3;background:#ede9df;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <img src="" alt="0〜1歳の誕生日イメージ" style="width:100%;height:100%;object-fit:cover;display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none'">
+          <div style="text-align:center;color:#b8b4ae;font-size:22px">📷</div>
+        </div>
       </div>
       <div class="bd-milestone-body">
         <h3 class="bd-milestone-h3">はじめて迎える特別な誕生日<br>健やかな成長を願う、はじめての贈り物</h3>
-        <p class="bd-milestone-desc">生まれてから初めて迎える誕生日は、ご家族にとってかけがえのない記念日。これからの成長を願い、長く思い出に残る上質なギフトを贈りませんか。</p>
+        <p class="bd-milestone-desc">初誕生日（ファーストバースデー）は、ご家族にとって一生に一度の記念日。赤ちゃんが口に含んでも安全な<br>オーガニックコットン100%の今治タオルを、<br>自信をもっておすすめします。</p>
         <a href="#" class="bd-milestone-link">おすすめのギフトを見る →</a>
       </div>
     </div>
@@ -842,10 +979,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-milestone-age">20歳</div>
         <div class="bd-milestone-name">COMING OF AGE</div>
         </div>
+        <!-- ▼ 20歳の写真：src="" に画像URLを入れると表示されます -->
+        <div class="bd-milestone-photo" style="width:100%;aspect-ratio:4/3;background:#ede9df;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <img src="" alt="20歳の誕生日イメージ" style="width:100%;height:100%;object-fit:cover;display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none'">
+          <div style="text-align:center;color:#b8b4ae;font-size:22px">📷</div>
+        </div>
       </div>
       <div class="bd-milestone-body">
         <h3 class="bd-milestone-h3">新たな門出を祝う誕生日<br>大人への第一歩を彩る特別なギフト</h3>
-        <p class="bd-milestone-desc">人生の新たなスタートを迎える20歳。これからの日々に寄り添う、長く愛用できる贈り物がおすすめです。</p>
+        <p class="bd-milestone-desc">成人祝い・20歳の誕生日は、大人としての暮らしが始まる節目。<br>良いものを長く使う習慣を、上質な今治タオルから贈りましょう。</p>
         <a href="#" class="bd-milestone-link">おすすめのギフトを見る →</a>
       </div>
     </div>
@@ -856,10 +998,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-milestone-age">30・40・50歳</div>
         <div class="bd-milestone-name">LIFE MILESTONE</div>
         </div>
+        <!-- ▼ 30・40・50歳の写真：src="" に画像URLを入れると表示されます -->
+        <div class="bd-milestone-photo" style="width:100%;aspect-ratio:4/3;background:#ede9df;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <img src="" alt="30・40・50歳の誕生日イメージ" style="width:100%;height:100%;object-fit:cover;display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none'">
+          <div style="text-align:center;color:#b8b4ae;font-size:22px">📷</div>
+        </div>
       </div>
       <div class="bd-milestone-body">
         <h3 class="bd-milestone-h3">人生を彩る節目<br>新たなステージを応援するプレゼント</h3>
-        <p class="bd-milestone-desc">ライフステージが変化する節目の年代。毎日の暮らしを豊かにする上質なギフトで、お祝いの気持ちを届けましょう。</p>
+        <p class="bd-milestone-desc">30代・40代・50代の誕生日祝いには、暮らしの質を上げる贈り物が喜ばれます。<br>毎日使うタオルこそ、本物のオーガニックコットンを選びましょう。</p>
         <a href="#" class="bd-milestone-link">おすすめのギフトを見る →</a>
       </div>
     </div>
@@ -870,10 +1017,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-milestone-age">60歳</div>
         <div class="bd-milestone-name">KANREKI</div>
         </div>
+        <!-- ▼ 60歳の写真：src="" に画像URLを入れると表示されます -->
+        <div class="bd-milestone-photo" style="width:100%;aspect-ratio:4/3;background:#ede9df;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <img src="" alt="60歳の誕生日イメージ" style="width:100%;height:100%;object-fit:cover;display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none'">
+          <div style="text-align:center;color:#b8b4ae;font-size:22px">📷</div>
+        </div>
       </div>
       <div class="bd-milestone-body">
         <h3 class="bd-milestone-h3">還暦祝い<br>感謝と健康を願う還暦ギフト</h3>
-        <p class="bd-milestone-desc">これまでの感謝と、これからの健康や幸せを願う還暦。記念として長く使える贈り物が人気です。</p>
+        <p class="bd-milestone-desc">還暦祝い（60歳）に込めたいのは、感謝とこれからの健康への願い。<br>10年使えるIKEUCHIの今治タオルが、その両方を形にします。</p>
         <a href="#" class="bd-milestone-link">おすすめのギフトを見る →</a>
       </div>
     </div>
@@ -884,10 +1036,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-milestone-age">70・77・80歳</div>
         <div class="bd-milestone-name">LONGEVITY</div>
         </div>
+        <!-- ▼ 70・77・80歳の写真：src="" に画像URLを入れると表示されます -->
+        <div class="bd-milestone-photo" style="width:100%;aspect-ratio:4/3;background:#ede9df;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <img src="" alt="70・77・80歳の誕生日イメージ" style="width:100%;height:100%;object-fit:cover;display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none'">
+          <div style="text-align:center;color:#b8b4ae;font-size:22px">📷</div>
+        </div>
       </div>
       <div class="bd-milestone-body">
         <h3 class="bd-milestone-h3">古希・喜寿・傘寿<br>人生の歩みを祝う長寿祝い</h3>
-        <p class="bd-milestone-desc">これまで歩んできた人生への敬意と感謝を込めて。心地よく使える上質なギフトを。</p>
+        <p class="bd-milestone-desc">古希祝い（70歳）・喜寿祝い（77歳）・傘寿祝い（80歳）は、<br>人生の歩みに敬意を表す長寿のお祝い。肌への優しさを追求したオーガニックタオルを贈りましょう。</p>
         <a href="#" class="bd-milestone-link">おすすめのギフトを見る →</a>
       </div>
     </div>
@@ -898,10 +1055,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-milestone-age">88・90・99歳</div>
         <div class="bd-milestone-name">CELEBRATION</div>
         </div>
+        <!-- ▼ 88・90・99歳の写真：src="" に画像URLを入れると表示されます -->
+        <div class="bd-milestone-photo" style="width:100%;aspect-ratio:4/3;background:#ede9df;overflow:hidden;display:flex;align-items:center;justify-content:center">
+          <img src="" alt="88・90・99歳の誕生日イメージ" style="width:100%;height:100%;object-fit:cover;display:none" onload="this.style.display='block';this.nextElementSibling.style.display='none'">
+          <div style="text-align:center;color:#b8b4ae;font-size:22px">📷</div>
+        </div>
       </div>
       <div class="bd-milestone-body">
         <h3 class="bd-milestone-h3">米寿・卒寿・白寿<br>これからも健やかな毎日を願って</h3>
-        <p class="bd-milestone-desc">ご家族みんなで祝う大切な節目。これからも元気で過ごしてほしいという願いを込めた贈り物を。</p>
+        <p class="bd-milestone-desc">米寿祝い（88歳）・卒寿祝い（90歳）・白寿祝い（99歳）は、<br>ご家族みんなで祝う長寿の節目。「これからも元気でいてね」の願いを、毎日使う今治タオルに込めて贈りましょう。</p>
         <a href="#" class="bd-milestone-link">おすすめのギフトを見る →</a>
       </div>
     </div>
@@ -915,90 +1077,9 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   <div class="bd-ttl">
     <span class="en">FIND YOUR GIFT</span>
     <h2>贈る相手別 誕生日プレゼント</h2>
-    <p>贈る相手と年代を選んで、ぴったりのギフトを見つけてください。</p>
+    <p>大好きなお母さんへ、大切なパートナーへ、いつも支えてくれるご友人へ。<br>「どんなものが喜ばれるかな？」と迷ったら、贈る相手と年代（20代・30代・40代・50代〜）を選ぶだけ。<br>今治タオル専門店ならではの品質で、あの人の毎日に寄り添う、最高の誕生日ギフトがすぐに見つかります。</p>
   </div>
   <div class="bd-accent-line"></div>
-
-  <!-- スライドギャラリー -->
-  <div class="bd-gallery-wrap">
-    <div class="bd-gallery-scroll" id="galleryTrack">
-      <div class="bd-gallery-item" style="background:#e8e4dc">
-        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo01.jpg" alt="オーガニックエアー プレミアムギフトセット" style="width:100%;height:100%;object-fit:cover;display:block"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#888">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-          <span style="font-size:10px;letter-spacing:.08em">オーガニックエアー プレミアムギフトセット</span>
-        </div>
-        <div class="bd-gallery-item-label">オーガニックエアー プレミアムギフトセット</div>
-      </div>
-      <div class="bd-gallery-item" style="background:#e0dcd6">
-        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo02.jpg" alt="フェイスタオル 2枚ギフトセット" style="width:100%;height:100%;object-fit:cover;display:block"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#888">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-          <span style="font-size:10px;letter-spacing:.08em">フェイスタオル 2枚ギフトセット</span>
-        </div>
-        <div class="bd-gallery-item-label">フェイスタオル 2枚ギフトセット</div>
-      </div>
-      <div class="bd-gallery-item" style="background:#e8e4dc">
-        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo03.jpg" alt="コットンヌーボー2026 バースデーボックス" style="width:100%;height:100%;object-fit:cover;display:block"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#888">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-          <span style="font-size:10px;letter-spacing:.08em">コットンヌーボー2026 バースデーボックス</span>
-        </div>
-        <div class="bd-gallery-item-label">コットンヌーボー2026 バースデーボックス</div>
-      </div>
-      <div class="bd-gallery-item" style="background:#dedad4">
-        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/index/aboutUsArea_photo01.jpg" alt="今治の自社工場で丁寧に製造" style="width:100%;height:100%;object-fit:cover;display:block"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#888">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-          <span style="font-size:10px;letter-spacing:.08em">今治の自社工場で丁寧に製造</span>
-        </div>
-        <div class="bd-gallery-item-label">今治の自社工場で丁寧に製造</div>
-      </div>
-      <div class="bd-gallery-item" style="background:#e8e4dc">
-        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo01.jpg" alt="コットンヌーボー2026 専用ボックス" style="width:100%;height:100%;object-fit:cover;display:block"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#888">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-          <span style="font-size:10px;letter-spacing:.08em">コットンヌーボー2026 専用ボックス</span>
-        </div>
-        <div class="bd-gallery-item-label">コットンヌーボー2026 専用ボックス</div>
-      </div>
-      <div class="bd-gallery-item" style="background:#e0dcd6">
-        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo02.jpg" alt="オーガニックエアー プレミアム" style="width:100%;height:100%;object-fit:cover;display:block"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#888">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-          <span style="font-size:10px;letter-spacing:.08em">オーガニックエアー プレミアム</span>
-        </div>
-        <div class="bd-gallery-item-label">オーガニックエアー プレミアム</div>
-      </div>
-    </div>
-    <button class="bd-gallery-btn prev" onclick="slideGallery(-1)" aria-label="前へ">&#8592;</button>
-    <button class="bd-gallery-btn next" onclick="slideGallery(1)" aria-label="次へ">&#8594;</button>
-    <div class="bd-gallery-dots" id="galleryDots"></div>
-  </div>
 
   <div class="bd-filter-wrap">
     <div class="bd-filter-title">🎂 誰への誕生日プレゼントですか？</div>
@@ -1033,7 +1114,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <div class="bd-card-body">
         <div class="bd-card-tags"><span class="bd-card-tag">友人・知人</span><span class="bd-card-tag">職場の方</span><span class="bd-card-tag">自分へのご褒美</span></div>
         <div class="bd-card-name">フェイスタオル 2枚ギフトセット</div>
-        <div class="bd-card-desc">気軽に贈れる定番。毎日使えるオーガニックタオルで日常をちょっと豊かに。</div>
+        <div class="bd-card-desc">気軽に贈れる誕生日ギフトの定番。<br>毎日使うタオルが、日常を少しずつ豊かにしてくれます。</div>
         <ul class="bd-card-items"><li>オーガニック120 フェイスタオル×2</li><li>無料ラッピング or 箱入り対応</li><li>バースデーカード同封可（無料）</li></ul>
         <div class="bd-card-price">¥4,400〜</div><div class="bd-card-price-note">税込・送料別</div>
         <a href="#" class="bd-card-btn">この商品を見る</a>
@@ -1044,7 +1125,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <div class="bd-card-body">
         <div class="bd-card-tags"><span class="bd-card-tag">お母さん・お父さん</span><span class="bd-card-tag">パートナー</span><span class="bd-card-tag">友人</span></div>
         <div class="bd-card-name">オーガニックエアー プレミアムギフトセット</div>
-        <div class="bd-card-desc">ふわふわの触り心地に思わず驚く。大切な方への誕生日プレゼントに最も選ばれているセット。</div>
+        <div class="bd-card-desc">初めて触れた方は、そのふわふわに思わず驚くはず。<br>IKEUCHIの誕生日プレゼントで最も選ばれているセットです。</div>
         <ul class="bd-card-items"><li>エアーフェイスタオル×2</li><li>エアーウォッシュタオル×2</li><li>箱入り・バースデーリボン対応</li></ul>
         <div class="bd-card-price">¥11,495〜</div><div class="bd-card-price-note">税込・送料別</div>
         <a href="#" class="bd-card-btn">この商品を見る</a>
@@ -1055,7 +1136,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <div class="bd-card-body">
         <div class="bd-card-tags"><span class="bd-card-tag">お母さん・お父さん</span><span class="bd-card-tag">30代〜60代</span></div>
         <div class="bd-card-name">コットンヌーボー2026 バースデーボックスセット</div>
-        <div class="bd-card-desc">今年だけのコットンを使った記念のタオル。専用ボックス＋バースデーリボンで特別感を演出。</div>
+        <div class="bd-card-desc">その年に収穫されたコットンだけで織る、一年限定のタオル。<br>誕生年を刻む、特別な記念の贈り物になります。</div>
         <ul class="bd-card-items"><li>コンパクトバスタオル×1</li><li>フェイスタオル×2</li><li>専用ボックス＋バースデーリボン</li><li>名入れ刺繍（記念日・お名前）対応</li></ul>
         <div class="bd-card-price">¥11,330〜</div><div class="bd-card-price-note">税込・送料別 ／ 名入れ刺繍は別途料金</div>
         <a href="#" class="bd-card-btn">この商品を見る</a>
@@ -1069,27 +1150,28 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-sec" id="bd-budget" style="background:#f5f2eb">
   <div class="bd-ttl">
     <span class="en">PRICE GUIDE</span>
-    <h2>予算別 おすすめ誕生日ギフト</h2>
+    <h2>予算で選ぶ、おすすめの誕生日ギフト</h2>
   </div>
-  <div class="bd-accent-line"></div>
+  <div class="bd-accent-line" style="margin-bottom:24px"></div>
+  <p style="text-align:center;font-size:13px;color:#666;line-height:2.1;font-weight:300;margin-bottom:40px">〜お祝いの気持ちに寄り添う、ご予算の目安〜大切なあの人へ贈る誕生日プレゼント。<br>お相手に気を遣わせず、心から喜んでもらえる予算別のタオルをご提案します。<br>相手との関係性や、お祝いのシチュエーションに合わせて、ぴったりの予算から素敵なお祝いを見つけてみてくださいね。</p>
   <div style="display:flex;flex-direction:column;gap:1px;background:#e8e4dc;border:1px solid #e8e4dc;border-radius:4px;overflow:hidden">
     <div style="background:#fff;display:grid;grid-template-columns:160px 1fr 140px;gap:0;align-items:stretch;border-bottom:1px solid #e8e4dc">
-      <div style="background:#1a1a1a;color:#fff;padding:20px 20px;font-size:16px;font-weight:300;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px">¥3,000〜</div>
+      <div style="background:#f5f2eb;color:#1a1a1a;padding:20px;font-size:16px;font-weight:400;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px;border-right:1px solid #e8e4dc">¥3,000〜</div>
       <div style="padding:20px 24px"><div style="font-size:13px;font-weight:500;margin-bottom:4px;color:#1a1a1a">気軽な誕生日プレゼントに</div><div style="font-size:11px;color:#888;font-weight:300;line-height:1.7">フェイスタオル1〜2枚のシンプルセット。友人や職場の方への気持ちを伝える贈り物に。</div></div>
       <div style="padding:20px;text-align:center;display:flex;align-items:center;justify-content:center"><a href="#" style="font-size:11px;color:#c8593a;text-decoration:none;border-bottom:1px solid #e8a08c;padding-bottom:1px;letter-spacing:.06em">この予算で選ぶ</a></div>
     </div>
     <div style="background:#fff;display:grid;grid-template-columns:160px 1fr 140px;gap:0;align-items:stretch;border-bottom:1px solid #e8e4dc">
-      <div style="background:#555;color:#fff;padding:20px 20px;font-size:16px;font-weight:300;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px">¥5,000〜</div>
+      <div style="background:#e8dcc8;color:#1a1a1a;padding:20px;font-size:16px;font-weight:400;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px;border-right:1px solid #ddd0b8">¥5,000〜</div>
       <div style="padding:20px 24px"><div style="font-size:13px;font-weight:500;margin-bottom:4px;color:#1a1a1a">仲の良い友人・家族へ</div><div style="font-size:11px;color:#888;font-weight:300;line-height:1.7">バスタオル＋フェイスタオルのセット。のし・ラッピング対応で特別感を演出。</div></div>
       <div style="padding:20px;text-align:center;display:flex;align-items:center;justify-content:center"><a href="#" style="font-size:11px;color:#c8593a;text-decoration:none;border-bottom:1px solid #e8a08c;padding-bottom:1px;letter-spacing:.06em">この予算で選ぶ</a></div>
     </div>
     <div style="background:#fff;display:grid;grid-template-columns:160px 1fr 140px;gap:0;align-items:stretch;border-bottom:1px solid #e8e4dc">
-      <div style="background:#c8593a;color:#fff;padding:20px 20px;font-size:16px;font-weight:300;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px">¥10,000〜</div>
+      <div style="background:#c8593a;color:#fff;padding:20px;font-size:16px;font-weight:400;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px">¥10,000〜</div>
       <div style="padding:20px 24px"><div style="font-size:13px;font-weight:500;margin-bottom:4px;color:#1a1a1a">大切なお母さん・パートナーへ</div><div style="font-size:11px;color:#888;font-weight:300;line-height:1.7">プレミアムセット。名入れ刺繍を加えれば、世界に一つだけの記念品に。</div></div>
       <div style="padding:20px;text-align:center;display:flex;align-items:center;justify-content:center"><a href="#" style="font-size:11px;color:#c8593a;text-decoration:none;border-bottom:1px solid #e8a08c;padding-bottom:1px;letter-spacing:.06em">この予算で選ぶ</a></div>
     </div>
     <div style="background:#fff;display:grid;grid-template-columns:160px 1fr 140px;gap:0;align-items:stretch;border-bottom:1px solid #e8e4dc">
-      <div style="background:#1a1a1a;color:#fff;padding:20px 20px;font-size:15px;font-weight:300;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px">¥20,000〜</div>
+      <div style="background:#1a1a1a;color:#fff;padding:20px;font-size:15px;font-weight:400;letter-spacing:.04em;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;min-height:72px">¥20,000〜</div>
       <div style="padding:20px 24px"><div style="font-size:13px;font-weight:500;margin-bottom:4px;color:#1a1a1a">節目の誕生日・法人ギフトに</div><div style="font-size:11px;color:#888;font-weight:300;line-height:1.7">最高級ライン＋オーダーメイド刺繍。タオルソムリエが専任でご対応します。</div></div>
       <div style="padding:20px;text-align:center;display:flex;align-items:center;justify-content:center"><a href="#" style="font-size:11px;color:#c8593a;text-decoration:none;border-bottom:1px solid #e8a08c;padding-bottom:1px;letter-spacing:.06em">ソムリエに相談</a></div>
     </div>
@@ -1100,8 +1182,8 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-sec" id="bd-ranking">
   <div class="bd-ttl">
     <span class="en">RANKING</span>
-    <h2>人気の誕生日プレゼントランキング</h2>
-    <p>実際に誕生日ギフトとして選ばれている商品のTop3です。</p>
+    <h2>IKEUCHIが自信をもっておすすめする<br>誕生日プレゼントランキング</h2>
+    <p>誕生日プレゼントとして実際に選ばれ続けている、今治タオルギフトのTop3です。</p>
   </div>
   <div class="bd-accent-line"></div>
   <div class="bd-rank-grid">
@@ -1110,7 +1192,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <div class="bd-rank-img"><img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo01.jpg" alt="1位" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="bd-rank-body">
         <div class="bd-rank-name">オーガニックエアー プレミアムギフトセット</div>
-        <div class="bd-rank-reason">「ふわふわで驚いた」という感想が最も多い。幅広い年代・関係性で選ばれている定番No.1。</div>
+        <div class="bd-rank-reason">「ふわふわで驚いた」というお声が最多。<br>年代・関係性を問わず選ばれ続けている、定番のNo.1ギフトです。</div>
         <div class="bd-rank-price">¥11,495〜</div>
         <a href="#" class="bd-rank-btn">商品を見る</a>
       </div>
@@ -1120,7 +1202,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <div class="bd-rank-img"><img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo03.jpg" alt="2位" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="bd-rank-body">
         <div class="bd-rank-name">コットンヌーボー2026 ボックスギフトセット</div>
-        <div class="bd-rank-reason">「その年だけのコットン」という特別感が人気。節目の誕生日や名入れ刺繍とのセットで選ばれることが多い。</div>
+        <div class="bd-rank-reason">一年限定のコットンという特別感が人気。<br>節目の誕生日には、名入れ刺繍との組み合わせがおすすめです。</div>
         <div class="bd-rank-price">¥11,330〜</div>
         <a href="#" class="bd-rank-btn">商品を見る</a>
       </div>
@@ -1130,7 +1212,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <div class="bd-rank-img"><img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo02.jpg" alt="3位" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'"></div>
       <div class="bd-rank-body">
         <div class="bd-rank-name">フェイスタオル 2枚ギフトセット</div>
-        <div class="bd-rank-reason">気軽に贈れるお手頃価格で、友人・職場の方への誕生日プレゼントとして安定した人気を誇る。</div>
+        <div class="bd-rank-reason">手に取りやすい価格と確かな品質。<br>ご友人・職場の方への誕生日プレゼントとして選ばれ続けています。</div>
         <div class="bd-rank-price">¥4,400〜</div>
         <a href="#" class="bd-rank-btn">商品を見る</a>
       </div>
@@ -1140,8 +1222,59 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 
 
 
+
+<!-- ===== お客様の声 ===== -->
+<div class="bd-sec" style="background:#f5f2eb;padding-top:72px;padding-bottom:72px">
+  <div class="bd-ttl">
+    <span class="en">CUSTOMER VOICE</span>
+    <h2>誕生日ギフトに贈った方の声</h2>
+    <p>実際にIKEUCHI ORGANICの今治タオルを選んだお客様から寄せられた声です。</p>
+  </div>
+  <div class="bd-accent-line"></div>
+  <div class="bd-reviews">
+
+    <div class="bd-review">
+      <div class="bd-review-stars">★★★★★</div>
+      <div class="bd-review-text">友達の誕生日祝いにプレゼントしたのですが、<br>大変喜んでくれました。<br>また次回も、違う商品をプレゼントに使いたいと思います。</div>
+      <div class="bd-review-meta">
+        <div class="bd-review-avatar">👤</div>
+        <div>
+          <div class="bd-review-name">購入者｜30代・男性</div>
+          <div class="bd-review-attr">友人へ｜バスタオル</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bd-review">
+      <div class="bd-review-stars">★★★★★</div>
+      <div class="bd-review-text">肌触りが気持ち良い上に、今まで使っていたタオルとくらべても吸水性が高く、<br>お風呂あがりにこれ一枚で足りて驚きました。<br>ぜひ買い足して使いたいと思います。</div>
+      <div class="bd-review-meta">
+        <div class="bd-review-avatar">👤</div>
+        <div>
+          <div class="bd-review-name">購入者｜30代・女性</div>
+          <div class="bd-review-attr">フェイスタオル</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bd-review">
+      <div class="bd-review-stars">★★★★★</div>
+      <div class="bd-review-text">オーガニック素材で肌触りも柔らかいので、<br>安心して使えると、喜んでいただけました。</div>
+      <div class="bd-review-meta">
+        <div class="bd-review-avatar">👤</div>
+        <div>
+          <div class="bd-review-name">購入者（非公開）</div>
+          <div class="bd-review-attr">ブランケット</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ===== 6. 刺繍 ===== -->
-<div class="bd-sec" id="bd-emb" style="background:#f5f2eb;padding-top:56px">
+<div style="background:#fff;height:64px"></div>
+<div class="bd-sec" id="bd-emb" style="background:#f5f2eb;padding-top:72px">
   <div class="bd-emb">
     <div class="bd-emb-img"><img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/index/aboutUsArea_photo01.jpg" alt="名入れ刺繍" style="width:100%;height:100%;object-fit:cover;border-radius:4px" onerror="this.style.display='none'"></div>
     <div class="bd-emb-body">
@@ -1150,7 +1283,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <h2>名入れ・刺繍で<br>世界にひとつだけのギフト</h2>
       </div>
       <div class="bd-accent-line" style="margin:14px 0 24px"></div>
-      <p class="bd-emb-text">お名前・記念日・メッセージをタオルに刺繍することで、誰かのためだけの特別なプレゼントになります。誕生日の記念に、ぜひご活用ください。</p>
+      <p class="bd-emb-text">お名前・誕生日・メッセージを刺繍した今治タオルは、<br>その方のためだけの一枚になります。<br>誕生日の日付を刻めば、毎年その日を思い出す特別な贈り物に。</p>
       <div class="bd-emb-points">
         <div class="bd-emb-point"><div class="bd-emb-point-ico">🔤</div><div><div class="bd-emb-point-title">お名前・イニシャル</div><div class="bd-emb-point-desc">フォント・糸色・サイズをお選びいただけます。</div></div></div>
         <div class="bd-emb-point"><div class="bd-emb-point-ico">📅</div><div><div class="bd-emb-point-title">記念日・誕生日</div><div class="bd-emb-point-desc">生年月日や誕生日の日付を刺繍。一生の記念に。</div></div></div>
@@ -1165,7 +1298,8 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-sec" id="bd-reason">
   <div class="bd-ttl">
     <span class="en">WHY IKEUCHI</span>
-    <h2>IKEUCHI ORGANICが<br>誕生日ギフトに選ばれる理由</h2>
+    <h2>IKEUCHI ORGANICの<br>今治タオルが<br>誕生日ギフトに選ばれる理由</h2>
+    <p style="text-align:center;font-size:13px;color:#888;font-weight:300;line-height:2;margin-top:12px">ギフトショップは数あれど、オーガニックコットン100%・風力発電100%・今治製をすべて満たすのはIKEUCHI ORGANICだけ。<br>タオルはすべての人が毎日使うもの。だから、誕生日プレゼントに選んで必ず喜ばれます。</p>
   </div>
   <div class="bd-accent-line"></div>
 <!-- 選ばれる理由の後：写真帯 -->
@@ -1199,12 +1333,12 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   </div>
 </div>
   <div class="bd-reasons" style="margin-top:40px">
-    <div class="bd-reason"><span class="bd-reason-ico">🌿</span><div class="bd-reason-title">赤ちゃんが口に含んでも安心な安全性</div><div class="bd-reason-desc">農薬・化学肥料不使用のオーガニックコットン100%。蛍光増白剤・柔軟剤ゼロ。どんな肌にも安心してお使いいただけます。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">⏳</span><div class="bd-reason-title">洗うほどふっくら、10年以上使える</div><div class="bd-reason-desc">適切なお手入れで5〜10年以上使い続けられます。「消耗品」ではなく「一生もの」として贈れるタオルです。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">🏭</span><div class="bd-reason-title">風力発電100%の今治工場で製造</div><div class="bd-reason-desc">愛媛県今治市の自社工場で、再生可能エネルギーのみを使用して製造。地球にも体にも最小限の負荷。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">✍️</span><div class="bd-reason-title">名入れ刺繍で世界に一枚だけに</div><div class="bd-reason-desc">お名前・記念日・メッセージを刺繍。フォント・糸色・サイズをお選びいただけます。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">🎁</span><div class="bd-reason-title">ギフトラッピングが充実</div><div class="bd-reason-desc">無料ラッピングから有料ボックス・風呂敷ラッピングまで対応。バースデーリボンも選べます。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">🧑‍💼</span><div class="bd-reason-title">タオルソムリエが無料でご提案</div><div class="bd-reason-desc">専門スタッフが相手・シーン・予算をうかがい、最適なギフトをご提案します。ZOOMでも対応可能。</div></div>
+    <div class="bd-reason"><span class="bd-reason-ico">🌿</span><div class="bd-reason-title">赤ちゃんが口に含んでも安心な安全性</div><div class="bd-reason-desc">農薬・化学肥料不使用のオーガニックコットン100%。<br>蛍光増白剤・柔軟剤は一切使っていません。<br>赤ちゃんから敏感肌の方まで、どなたにも安心してお使いいただけます。</div></div>
+    <div class="bd-reason"><span class="bd-reason-ico">⏳</span><div class="bd-reason-title">洗うほどふっくら、10年以上使える</div><div class="bd-reason-desc">IKEUCHIの今治タオルは、5〜10年以上お使いいただけます。<br>誕生日に贈りたいのは消耗品ではなく、<br>一生もののオーガニックタオルです。</div></div>
+    <div class="bd-reason"><span class="bd-reason-ico">🏭</span><div class="bd-reason-title">風力発電100%の今治工場で製造</div><div class="bd-reason-desc">愛媛県今治市の自社工場は、<br>電力の100%を風力発電でまかなっています。<br>地球にも肌にも、できるだけ負荷をかけずに作っています。</div></div>
+    <div class="bd-reason"><span class="bd-reason-ico">✍️</span><div class="bd-reason-title">名入れ刺繍で世界に一枚だけに</div><div class="bd-reason-desc">お名前・記念日・メッセージを刺繍できます。<br>フォント・糸色・サイズも選べるので、<br>完全に一点ものの贈り物になります。</div></div>
+    <div class="bd-reason"><span class="bd-reason-ico">🎁</span><div class="bd-reason-title">ギフトラッピングが充実</div><div class="bd-reason-desc">無料ラッピングから箱入り・風呂敷まで4種類をご用意。<br>誕生日専用のバースデーリボンもお選びいただけます。</div></div>
+    <div class="bd-reason"><span class="bd-reason-ico">🧑‍💼</span><div class="bd-reason-title">タオルソムリエが無料でご提案</div><div class="bd-reason-desc">タオルソムリエがお相手・シーン・ご予算をうかがい、<br>最適な一枚をご提案します。<br>ご相談は無料、ZOOMでも対応しています。</div></div>
   </div>
 </div>
 
@@ -1213,7 +1347,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   <div class="bd-ttl">
     <span class="en">BIRTHDAY CARD</span>
     <h2>バースデーカードを選ぶ</h2>
-    <p>IKEUCHI ORGANICオリジナルのメッセージカードをお入れします。<br>定型文4種からお選びいただくか、オリジナルメッセージをご入力ください。</p>
+    <p>ギフトにはIKEUCHI ORGANICオリジナルのメッセージカードを無料で同封できます。<br>定型文4種から選んでも、ご自分の言葉で書いても大丈夫です。</p>
   </div>
   <div class="bd-accent-line"></div>
 
@@ -1322,7 +1456,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   <div class="bd-ttl">
     <span class="en">HOW TO ORDER</span>
     <h2>カートへの進み方</h2>
-    <p>メッセージカードをギフトに添えるための手順を、画面イメージと一緒にご説明します。</p>
+    <p>カードを添えた誕生日ギフトのご注文は、5つのステップで完了します。</p>
   </div>
   <div class="bd-accent-line"></div>
   <div class="bd-howto-steps">
@@ -1499,6 +1633,8 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   </div>
   <div class="bd-accent-line"></div>
   <div class="bd-faq">
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">今治タオルとオーガニックタオルの違いは何ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">今治タオルは愛媛県今治市で製造され品質基準を満たしたタオルの総称です。オーガニックタオルは農薬・化学肥料を使わないオーガニックコットンで作られたタオルを指します。IKEUCHI ORGANICのタオルは、その両方を満たす「今治製のオーガニックタオル」です。</div></div>
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">誕生日プレゼントにタオルを贈るのは失礼ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">失礼にはあたりません。タオルは実用性が高く、上質なものほど自分では買わないため、誕生日プレゼントとして喜ばれる定番ギフトです。特に今治タオルのような高品質ブランドタオルは、目上の方への贈り物にも適しています。</div></div>
     <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">誕生日プレゼントにのしは必要ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">誕生日ギフトにのしは不要な場合がほとんどですが、ご希望の方にはのしをご用意しております。お誕生日には蝶結びの水引きが一般的です。備考欄にてご指定ください。</div></div>
     <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">名入れ刺繍はいつ頃できますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">ご注文から通常7〜10営業日程度のお時間をいただいております。お急ぎの場合はご注文前にお問い合わせください。</div></div>
     <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">直接相手の住所に送れますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">はい、直接お贈り先様にお届けすることが可能です。その際、納品書などの金額がわかるものは同梱いたしませんのでご安心ください。</div></div>
@@ -1508,18 +1644,108 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   </div>
 </div>
 
+<!-- FAQ/CTA 区切り -->
+<div style="background:#fff;height:2px"></div>
+<div style="background:#e8e4dc;height:1px"></div>
+<div style="background:#fff;height:56px"></div>
+
 <!-- ===== CTA ===== -->
 <div class="bd-cta">
   <span class="bd-cta-en">BIRTHDAY GIFT</span>
-  <h2 class="bd-cta-title">大切な方の誕生日に、<br>本物のタオルを贈りませんか。</h2>
-  <p class="bd-cta-sub">タオルソムリエが、シーン・予算・お相手に合わせた最適なギフトをご提案します。</p>
+  <h2 class="bd-cta-title">大切な贈り物だから。<br>プロがお手伝いいたします。</h2>
+  <div style="margin:36px 0"><!-- スライドギャラリー -->
+  <div class="bd-gallery-wrap" style="margin:0">
+    <div class="bd-gallery-scroll" id="galleryTrack">
+      <div class="bd-gallery-item" style="background:#e8e4dc">
+        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo01.jpg" alt="オーガニックエアー プレミアムギフトセット" style="width:100%;height:100%;object-fit:cover;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:#c4beb4">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+        <div class="bd-gallery-item-label">オーガニックエアー プレミアムギフトセット</div>
+      </div>
+      <div class="bd-gallery-item" style="background:#e0dcd6">
+        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo02.jpg" alt="フェイスタオル 2枚ギフトセット" style="width:100%;height:100%;object-fit:cover;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:#c4beb4">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+        <div class="bd-gallery-item-label">フェイスタオル 2枚ギフトセット</div>
+      </div>
+      <div class="bd-gallery-item" style="background:#e8e4dc">
+        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo03.jpg" alt="コットンヌーボー2026 バースデーボックス" style="width:100%;height:100%;object-fit:cover;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:#c4beb4">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+        <div class="bd-gallery-item-label">コットンヌーボー2026 バースデーボックス</div>
+      </div>
+      <div class="bd-gallery-item" style="background:#dedad4">
+        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/index/aboutUsArea_photo01.jpg" alt="今治の自社工場で丁寧に製造" style="width:100%;height:100%;object-fit:cover;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:#c4beb4">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+        <div class="bd-gallery-item-label">今治の自社工場で丁寧に製造</div>
+      </div>
+      <div class="bd-gallery-item" style="background:#e8e4dc">
+        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo01.jpg" alt="コットンヌーボー2026 専用ボックス" style="width:100%;height:100%;object-fit:cover;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:#c4beb4">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+        <div class="bd-gallery-item-label">コットンヌーボー2026 専用ボックス</div>
+      </div>
+      <div class="bd-gallery-item" style="background:#e0dcd6">
+        <img src="https://www.ikeuchi.org/ikeuchi_admin/wp-content/themes/ikeuchi_renew/assets/img/page/product_photo02.jpg" alt="オーガニックエアー プレミアム" style="width:100%;height:100%;object-fit:cover;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;color:#c4beb4">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+        <div class="bd-gallery-item-label">オーガニックエアー プレミアム</div>
+      </div>
+    </div>
+    <button class="bd-gallery-btn prev" onclick="slideGallery(-1)" aria-label="前へ">&#8592;</button>
+    <button class="bd-gallery-btn next" onclick="slideGallery(1)" aria-label="次へ">&#8594;</button>
+    <div class="bd-gallery-dots" id="galleryDots"></div>
+  </div></div>
+  <p class="bd-cta-sub">特別なお誕生日プレゼント選びに迷ったら、タオルのプロ「タオルソムリエ」にお任せください。<br>赤ちゃんへのファーストタオルから、これからの健康を願う長寿のお祝いまで。<br>お祝いの気持ちがまっすぐ伝わる最適な1枚を、心を込めてご提案します。<br>小さな疑問も、どうぞお気軽にお聞かせくださいね。</p>
   <div class="bd-cta-btns">
-    <a href="#bd-finder" class="bd-btn-fill-wh">ギフトを探す</a>
+    <a class="bd-btn-fill-wh" onclick="bdScrollTo(event,'bd-finder')" style="cursor:pointer">ギフトを探す</a>
     <a href="https://www.ikeuchi.org/store/zoom_online/" class="bd-btn-line-wh">ソムリエに相談する（無料）</a>
   </div>
 </div>
 
+  
+
+
+
+<div style="background:#fff;height:40px"></div>
 </div><!-- /.bd -->
+
+<button class="bd-totop" id="bdToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="ページトップへ戻る">↑</button>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "今治タオルとオーガニックタオルの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "今治タオルは愛媛県今治市で製造され品質基準を満たしたタオルの総称です。オーガニックタオルは農薬・化学肥料を使わないオーガニックコットンで作られたタオルを指します。IKEUCHI ORGANICのタオルは、その両方を満たす今治製のオーガニックタオルです。"}},
+    {"@type": "Question", "name": "誕生日プレゼントにタオルを贈るのは失礼ですか？", "acceptedAnswer": {"@type": "Answer", "text": "失礼にはあたりません。タオルは実用性が高く、上質なものほど自分では買わないため、誕生日プレゼントとして喜ばれる定番ギフトです。特に今治タオルのような高品質ブランドタオルは、目上の方への贈り物にも適しています。"}},
+    {"@type": "Question", "name": "誕生日プレゼントにのしは必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "誕生日ギフトにのしは不要な場合がほとんどですが、ご希望の方にはのしをご用意しております。お誕生日には蝶結びの水引きが一般的です。"}},
+    {"@type": "Question", "name": "名入れ刺繍はいつ頃できますか？", "acceptedAnswer": {"@type": "Answer", "text": "ご注文から通常7〜10営業日程度のお時間をいただいております。"}},
+    {"@type": "Question", "name": "誕生日プレゼントを直接相手の住所に送れますか？", "acceptedAnswer": {"@type": "Answer", "text": "直接お贈り先様にお届けすることが可能です。納品書などの金額がわかるものは同梱いたしません。"}},
+    {"@type": "Question", "name": "還暦祝いや古希祝いにタオルは適していますか？", "acceptedAnswer": {"@type": "Answer", "text": "適しています。タオルはすべての人が毎日使い、上質なものは5〜10年使えるため、還暦祝い（60歳）・古希祝い（70歳）・喜寿祝い（77歳）・傘寿祝い（80歳）・米寿祝い（88歳）などの長寿祝いに選ばれています。IKEUCHI ORGANICでは名入れ刺繍で記念日を刻むこともできます。"}}
+  ]
+}
+</script>
+<script>
+window.addEventListener('scroll', function(){
+  var btn = document.getElementById('bdToTop');
+  if(btn) btn.classList.toggle('show', window.scrollY > 400);
+});
+</script>
 
 <script>
 // ===== 絞り込み =====
@@ -1627,9 +1853,29 @@ function fbCopy(text,cb){
 }
 
 // ===== FAQ =====
+
+// ===== 選び方カードホバー =====
+document.querySelectorAll('.bd-howto-card').forEach(function(card){
+  card.addEventListener('mouseenter', function(){
+    card.classList.add('hovered');
+  });
+  card.addEventListener('mouseleave', function(){
+    card.classList.remove('hovered');
+  });
+});
+
 function bdFaq(item){
   item.classList.toggle('open');
 }
+
+function bdScrollTo(e, id){
+  var el = document.getElementById(id);
+  if(el){
+    e.preventDefault();
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
 
 var galIdx = 0;
 var galTotal = 6;
