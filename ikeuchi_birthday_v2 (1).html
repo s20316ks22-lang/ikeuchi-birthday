@@ -166,24 +166,24 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 .bd-emb-point-desc{font-size:11px;color:#888;line-height:1.7;font-weight:300}
 
 /* ===== 選ばれる理由 ===== */
-.bd-reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e8e4dc;border:1px solid #e8e4dc;border-radius:4px;overflow:hidden}
-@media(max-width:700px){.bd-reasons{grid-template-columns:1fr}}
-.bd-reason{background:#fff;padding:36px 28px}
+.bd-reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:#e8e4dc;border:1px solid #e8e4dc;border-radius:4px;overflow:hidden}
+@media(max-width:700px){.bd-reasons{grid-template-columns:1fr}.bd-reason[style*="span 2"]{grid-column:span 1!important}}
+.bd-reason{background:#fff;padding:36px 36px}
 .bd-reason:hover{background:#f5f2eb}
-.bd-reason-ico{font-size:32px;display:block;margin-bottom:14px}
-.bd-reason-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:10px;letter-spacing:.04em;line-height:1.5}
-.bd-reason-desc{font-size:12px;color:#888;line-height:1.9;font-weight:300}
+.bd-reason-ico{font-size:36px;display:block;margin-bottom:16px}
+.bd-reason-title{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:12px;letter-spacing:.03em;line-height:1.5}
+.bd-reason-desc{font-size:12px;color:#555;line-height:2;font-weight:300}
 
 /* ===== メッセージカード ===== */
 .bd-card-faces{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
 @media(max-width:600px){.bd-card-faces{grid-template-columns:1fr}}
 .bd-card-face-label{font-size:11px;font-weight:500;color:#888;letter-spacing:.1em;margin-bottom:8px;text-transform:uppercase}
-.bd-card-front{aspect-ratio:9/6;background:#fff;border:1px solid #e8e4dc;border-radius:4px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.bd-card-front-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
-.bd-yellow-tag{width:34px;height:54px;background:#f0c800;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.bd-card-front{aspect-ratio:9/6;background:#fff;border:1px solid #e8e4dc;border-radius:4px;display:flex;align-items:flex-start;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.06);padding-top:0;overflow:hidden;position:relative}
+.bd-card-front-inner{display:flex;flex-direction:column;align-items:center;gap:0;width:100%;height:100%;position:relative}
+.bd-yellow-tag{width:28px;height:48px;background:#f5c400;border-radius:0 0 2px 2px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:8px;gap:4px;box-shadow:0 2px 6px rgba(0,0,0,.15);position:absolute;top:0;left:50%;transform:translateX(-50%)}
 .bd-yellow-tag-s{width:22px;height:3px;background:#fff;border-radius:1px;opacity:.7}
 .bd-yellow-tag-l{width:17px;height:2px;background:#fff;border-radius:1px;opacity:.5}
-.bd-card-logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:9px;letter-spacing:.18em;color:#aaa;font-weight:300}
+.bd-card-logo{font-family:'Zen Kaku Gothic New',sans-serif;font-size:8px;letter-spacing:.18em;color:#ccc;font-weight:300;position:absolute;bottom:10px;right:12px}
 .bd-card-back{aspect-ratio:9/6;background:#fff;border:1px solid #e8e4dc;border-radius:4px;padding:16px 18px;display:flex;align-items:flex-start;overflow:hidden;transition:border-color .2s;box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .bd-card-back.has-text{border-color:#1a1a1a}
 .bd-card-back-text{font-size:10px;line-height:1.9;color:#1a1a1a;white-space:pre-line;font-family:'Noto Sans JP',sans-serif;font-weight:300;width:100%}
@@ -228,26 +228,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 .bd-note{background:#fff;border-left:3px solid #c8593a;padding:12px 16px;margin-top:20px;font-size:11px;color:#666;line-height:1.9;font-weight:300}
 .bd-note strong{color:#1a1a1a;font-weight:500}
 
-/* ===== カートへの進み方（縦並び） ===== */
-.bd-howto-steps{display:flex;flex-direction:column;gap:0;margin-bottom:48px}
-.bd-howto-step{display:grid;grid-template-columns:64px 1fr;gap:0;border-bottom:1px solid #e8e4dc}
-.bd-howto-step:first-child{border-top:1px solid #e8e4dc}
-.bd-howto-step-left{display:flex;flex-direction:column;align-items:center;padding:36px 16px;border-right:1px solid #e8e4dc;background:#f5f2eb}
-.bd-howto-step-num{width:40px;height:40px;border-radius:50%;background:#1a1a1a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;margin-bottom:8px;flex-shrink:0}
-.bd-howto-step-ico{font-size:22px}
-.bd-howto-step-right{padding:36px 40px;display:flex;flex-direction:column;justify-content:center}
-@media(max-width:640px){.bd-howto-step-right{padding:24px 20px}}
-.bd-howto-step-title{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:8px;letter-spacing:.04em}
-.bd-howto-step-desc{font-size:12px;color:#888;line-height:1.9;font-weight:300;margin-bottom:16px}
-.bd-howto-step-screen{border:1px solid #e8e4dc;border-radius:6px;overflow:hidden;max-width:520px}
-.bd-howto-screen-bar{background:#1a1a1a;padding:7px 14px;display:flex;align-items:center;gap:6px}
-.bd-howto-screen-dot{width:8px;height:8px;border-radius:50%}
-.bd-howto-screen-dot.r{background:#ff5f57}
-.bd-howto-screen-dot.y{background:#ffbd2e}
-.bd-howto-screen-dot.g{background:#28c840}
-.bd-howto-screen-url{flex:1;background:#333;border-radius:3px;padding:3px 10px;font-size:9px;color:#aaa;letter-spacing:.04em;font-family:monospace}
-.bd-howto-step-label-bar{background:#c8593a;color:#fff;font-size:10px;font-weight:500;padding:6px 14px;letter-spacing:.1em}
-.bd-howto-callout{background:#fdf0ec;border-left:3px solid #c8593a;padding:10px 14px;margin-top:12px;font-size:11px;color:#8b3d26;line-height:1.7;font-weight:500;max-width:520px}
+
 
 /* ===== FAQ ===== */
 .bd-faq{display:flex;flex-direction:column;gap:0}
@@ -682,7 +663,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   }
   .bd-spec-item:last-child { border-bottom: none; }
 
-  /* カートへの進み方 */
+
   .bd-howto-step {
     grid-template-columns: 52px 1fr;
   }
@@ -730,7 +711,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
     padding: 15px 20px;
   }
 
-  /* カートへの進み方ステップ */
+
   .bd-howto-steps {
     margin-bottom: 32px;
   }
@@ -853,6 +834,49 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 .bd-howto-card.hovered .bd-howto-link {
   color: #c8593a !important;
 }
+
+/* ===== サービスカテゴリ ===== */
+.bd-service-section { margin-top: 32px; }
+.bd-service-label {
+  font-size: 10px; letter-spacing: .35em; color: #c8593a;
+  text-transform: uppercase; font-weight: 500;
+  margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+}
+.bd-service-label::after {
+  content: ''; flex: 1; height: 1px; background: #e8e4dc;
+}
+.bd-service-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 0; background: #e8e4dc;
+  border: 1px solid #e8e4dc; border-radius: 4px; overflow: hidden;
+}
+@media(max-width:700px){ .bd-service-grid { grid-template-columns: 1fr; } }
+
+/* ===== 選ばれる理由 罫線 ===== */
+.bd-reasons .bd-reason:nth-child(1), .bd-reasons .bd-reason:nth-child(2) { border-right: 1px solid #e8e4dc; border-bottom: 1px solid #e8e4dc; }
+.bd-reasons .bd-reason:nth-child(3) { border-bottom: 1px solid #e8e4dc; }
+
+/* 選ばれる理由：4・5番目は2列幅 */
+.bd-reasons .bd-reason:nth-child(4),
+.bd-reasons .bd-reason:nth-child(5) {
+  grid-column: span 1;
+}
+/* 下段2つを2列2等分にするため、4番目から改行して2列グリッドに */
+.bd-reasons-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  background: #e8e4dc;
+  border-top: 1px solid #e8e4dc;
+}
+.bd-reasons-bottom .bd-reason:first-child {
+  border-right: 1px solid #e8e4dc;
+}
+
+.bd-service-grid .bd-reason:nth-child(1),
+.bd-service-grid .bd-reason:nth-child(2) {
+  border-right: 1px solid #e8e4dc;
+}
 </style>
 
 <div class="bd" style="overflow-x:hidden">
@@ -862,11 +886,11 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-hero">
   <div class="bd-hero-text">
     <div class="bd-hero-en">BIRTHDAY GIFT</div>
-    <h1 class="bd-hero-h1">誕生日に、一生使える<br>今治タオルを<strong>贈る。</strong></h1>
-    <p class="bd-hero-sub">タオルは、すべての人が毎日使うもの。だから誕生日プレゼントに選んで、必ず喜ばれます。<br>オーガニックコットン100%・今治製。IKEUCHI ORGANICにしか作れないタオルを贈りましょう。<br>名入れ刺繍を添えれば、世界に一枚だけのギフトになります。</p>
+    <h1 class="bd-hero-h1">誕生日に、一生使える<br>今治タオルの<br>オーガニックタオルを<strong>贈る。</strong></h1>
+    <p class="bd-hero-sub">タオルは、すべての人が毎日使うもの。誕生日プレゼントに選んで、必ず喜ばれます。<br>オーガニックコットン100%・今治製。今治タオルのIKEUCHI ORGANICにしか作れないタオルを贈りましょう。<br>名入れ刺繍を添えれば、世界に一つだけのギフトになります。</p>
     <div class="bd-hero-btns">
       <a class="bd-btn-fill" onclick="bdScrollTo(event,'bd-finder')" style="cursor:pointer">プレゼントを探す</a>
-      <a class="bd-btn-line" onclick="bdScrollTo(event,'bd-card')" style="cursor:pointer">カードを選ぶ</a>
+      <a class="bd-btn-line" onclick="bdScrollTo(event,'bd-card')" style="cursor:pointer">カードを作る</a>
     </div>
   </div>
   <div class="bd-hero-img">
@@ -887,7 +911,9 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
     <li><a onclick="bdScrollTo(event,'bd-ranking')" style="cursor:pointer"><span class="num">5</span>人気の誕生日プレゼントランキング</a></li>
     <li><a onclick="bdScrollTo(event,'bd-emb')" style="cursor:pointer"><span class="num">6</span>名入れ・刺繍で世界にひとつだけのギフト</a></li>
     <li><a onclick="bdScrollTo(event,'bd-reason')" style="cursor:pointer"><span class="num">7</span>IKEUCHI ORGANICが選ばれる理由</a></li>
-    <li><a onclick="bdScrollTo(event,'bd-faq')" style="cursor:pointer"><span class="num">8</span>よくある質問</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-card')" style="cursor:pointer"><span class="num">8</span>バースデーカード・ギフトサービス</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-egift')" style="cursor:pointer"><span class="num">9</span>eギフトで贈る</a></li>
+    <li><a onclick="bdScrollTo(event,'bd-faq')" style="cursor:pointer"><span class="num">10</span>よくある質問</a></li>
   </ul>
 </div>
 
@@ -928,17 +954,15 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
     <span class="bd-img-text-en">GIFT STORY</span>
     <h2 class="bd-img-text-h">「消耗品」ではなく<br>「思い出に残る一品」を。</h2>
     <p class="bd-img-text-p">
-      せっかくの誕生日だから、<br>
       毎日使えて、ずっと愛されるものを贈りたい。<br>
-      世界でもめずらしい、<br>
-      風力発電の力で織られたオーガニックコットン100%のタオル。<br>
-      IKEUCHI ORGANICの今治タオルは、使えば使うほど、<br>
-      ふっくらと愛おしく育っていきます。<br>
+      世界でもめずらしい、100％風力発電の電力でまかなう<br>
+      「風で織るタオル」と呼ばれたオーガニックコットン100%のタオル。<br>
+      今治タオルのIKEUCHI ORGANICのタオルは、きちんとしたお手入れをすれば、<br>
+      5年、10年と長くお使いいただけます。<br>
       「これ、本当に気持ちいいんだよ」<br>
       5年後も10年後も、そう言いながら使ってもらえる。<br>
       そんな、暮らしに溶け込むプレゼントです。
     </p>
-    <a onclick="bdScrollTo(event,'bd-finder')" style="cursor:pointer;display:inline-block;padding:6px 16px;background:#1a1a1a;color:#fff;font-size:11px;letter-spacing:.06em;text-decoration:none;font-family:inherit;font-weight:400;align-self:flex-end;margin-left:auto">ギフトを探す</a>
   </div>
 </div>
 
@@ -968,7 +992,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       </div>
       <div class="bd-milestone-body">
         <h3 class="bd-milestone-h3">はじめて迎える特別な誕生日<br>健やかな成長を願う、はじめての贈り物</h3>
-        <p class="bd-milestone-desc">初誕生日（ファーストバースデー）は、ご家族にとって一生に一度の記念日。赤ちゃんが口に含んでも安全な<br>オーガニックコットン100%の今治タオルを、<br>自信をもっておすすめします。</p>
+        <p class="bd-milestone-desc">初誕生日（ファーストバースデー）は、ご家族にとって一生に一度の記念日。赤ちゃんが口に含んでも安全な<br>オーガニックコットン100%の今治タオルを、<br>自信を持っておすすめします。</p>
         <a href="#" class="bd-milestone-link">おすすめのギフトを見る →</a>
       </div>
     </div>
@@ -1182,8 +1206,8 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-sec" id="bd-ranking">
   <div class="bd-ttl">
     <span class="en">RANKING</span>
-    <h2>IKEUCHIが自信をもっておすすめする<br>誕生日プレゼントランキング</h2>
-    <p>誕生日プレゼントとして実際に選ばれ続けている、今治タオルギフトのTop3です。</p>
+    <h2>IKEUCHI ORGANIC<br>誕生日プレゼントランキング</h2>
+    <p>誕生日プレゼントとして実際に選ばれ続けている、今治タオルの<br>オーガニックタオルのTop3です。</p>
   </div>
   <div class="bd-accent-line"></div>
   <div class="bd-rank-grid">
@@ -1298,7 +1322,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-sec" id="bd-reason">
   <div class="bd-ttl">
     <span class="en">WHY IKEUCHI</span>
-    <h2>IKEUCHI ORGANICの<br>今治タオルが<br>誕生日ギフトに選ばれる理由</h2>
+    <h2>今治タオルの<br>IKEUCHI ORGANICが<br>誕生日ギフトに選ばれる理由</h2>
     <p style="text-align:center;font-size:13px;color:#888;font-weight:300;line-height:2;margin-top:12px">ギフトショップは数あれど、オーガニックコットン100%・風力発電100%・今治製をすべて満たすのはIKEUCHI ORGANICだけ。<br>タオルはすべての人が毎日使うもの。だから、誕生日プレゼントに選んで必ず喜ばれます。</p>
   </div>
   <div class="bd-accent-line"></div>
@@ -1332,13 +1356,38 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
     </div>
   </div>
 </div>
-  <div class="bd-reasons" style="margin-top:40px">
-    <div class="bd-reason"><span class="bd-reason-ico">🌿</span><div class="bd-reason-title">赤ちゃんが口に含んでも安心な安全性</div><div class="bd-reason-desc">農薬・化学肥料不使用のオーガニックコットン100%。<br>蛍光増白剤・柔軟剤は一切使っていません。<br>赤ちゃんから敏感肌の方まで、どなたにも安心してお使いいただけます。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">⏳</span><div class="bd-reason-title">洗うほどふっくら、10年以上使える</div><div class="bd-reason-desc">IKEUCHIの今治タオルは、5〜10年以上お使いいただけます。<br>誕生日に贈りたいのは消耗品ではなく、<br>一生もののオーガニックタオルです。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">🏭</span><div class="bd-reason-title">風力発電100%の今治工場で製造</div><div class="bd-reason-desc">愛媛県今治市の自社工場は、<br>電力の100%を風力発電でまかなっています。<br>地球にも肌にも、できるだけ負荷をかけずに作っています。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">✍️</span><div class="bd-reason-title">名入れ刺繍で世界に一枚だけに</div><div class="bd-reason-desc">お名前・記念日・メッセージを刺繍できます。<br>フォント・糸色・サイズも選べるので、<br>完全に一点ものの贈り物になります。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">🎁</span><div class="bd-reason-title">ギフトラッピングが充実</div><div class="bd-reason-desc">無料ラッピングから箱入り・風呂敷まで4種類をご用意。<br>誕生日専用のバースデーリボンもお選びいただけます。</div></div>
-    <div class="bd-reason"><span class="bd-reason-ico">🧑‍💼</span><div class="bd-reason-title">タオルソムリエが無料でご提案</div><div class="bd-reason-desc">タオルソムリエがお相手・シーン・ご予算をうかがい、<br>最適な一枚をご提案します。<br>ご相談は無料、ZOOMでも対応しています。</div></div>
+  <!-- IKEUCHI ORGANICの品質 5つ -->
+  <div class="bd-reasons" style="margin-top:40px;grid-template-columns:repeat(2,1fr) repeat(1,1fr)">
+    <div class="bd-reason">
+      <span class="bd-reason-ico">🏭</span>
+      <div class="bd-reason-title">愛媛県今治市の自社工場で製造</div>
+      <div class="bd-reason-desc">日本有数のタオル産地・愛媛県今治市にある自社工場で、熟練の職人たちが、一枚一枚に妥協することなく、誠実なものづくりを行っています。</div>
+    </div>
+    <div class="bd-reason">
+      <span class="bd-reason-ico">🌿</span>
+      <div class="bd-reason-title">オーガニックコットン100%</div>
+      <div class="bd-reason-desc">「世界一安全なタオルを届けたい」という想いから、3年以上農薬や化学肥料を使わない有機栽培で育てられている&遺伝子組換え種子でないオーガニックコットンのみを使用。</div>
+    </div>
+    <div class="bd-reason">
+      <span class="bd-reason-ico">⏳</span>
+      <div class="bd-reason-title">5年、10年とずっと大切に使える</div>
+      <div class="bd-reason-desc">適切なお手入れをすれば、5年、10年とご愛用いただくことができます。タオルの風合いが変わってきたら、タオルメンテナンスのサービスも。</div>
+    </div>
+  </div>
+  <!-- 下段：2列2等分 -->
+  <div class="bd-reasons-bottom" style="border:1px solid #e8e4dc;border-top:none;border-radius:0 0 4px 4px;overflow:hidden">
+    <div class="bd-reason">
+      <span class="bd-reason-ico">💨</span>
+      <div class="bd-reason-title">風で織るタオル</div>
+      <div class="bd-reason-desc">生産活動における環境負荷を少しでも低減するために、自社の使用電力を100%風力でまかなう日本初の企業。この取り組みによって「風で織るタオル」と呼ばれています。</div>
+    </div>
+    <div class="bd-reason">
+      <span class="bd-reason-ico">👶</span>
+      <div class="bd-reason-title">赤ちゃんが口に含んでも安心</div>
+      <div class="bd-reason-desc">私たちがつくるタオルは、赤ちゃんが口に含んでも安全だと証明する国際認証エコテックス規格100のクラス1をクリアしています。</div>
+    </div>
+  </div>
+
   </div>
 </div>
 
@@ -1346,8 +1395,8 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div class="bd-sec" id="bd-card" style="background:#f5f2eb">
   <div class="bd-ttl">
     <span class="en">BIRTHDAY CARD</span>
-    <h2>バースデーカードを選ぶ</h2>
-    <p>ギフトにはIKEUCHI ORGANICオリジナルのメッセージカードを無料で同封できます。<br>定型文4種から選んでも、ご自分の言葉で書いても大丈夫です。</p>
+    <h2>バースデーカードを作る</h2>
+    <p>IKEUCHI ORGANICオリジナルのメッセージカードを無料で同封できます。<br>定型文4種から選んでも、ご自分の言葉で書いても大丈夫です。</p>
   </div>
   <div class="bd-accent-line"></div>
 
@@ -1362,7 +1411,12 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-card-face-label">表面</div>
         <div class="bd-card-front">
           <div class="bd-card-front-inner">
-            <div class="bd-yellow-tag"><div class="bd-yellow-tag-s"></div><div class="bd-yellow-tag-l"></div></div>
+            <!-- 黄色タグ（上から垂れ下がる） -->
+            <div class="bd-yellow-tag">
+              <div class="bd-yellow-tag-s"></div>
+              <div class="bd-yellow-tag-l"></div>
+            </div>
+            <!-- ロゴ右下 -->
             <div class="bd-card-logo">IKEUCHI ORGANIC</div>
           </div>
         </div>
@@ -1404,10 +1458,8 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
           <div class="ci-check">✓</div>
           <div class="ci-badge">CASUAL</div>
           <div class="ci-title">友人・家族へ</div>
-          <div class="ci-body">お誕生日おめでとう！
-毎日使えるものをプレゼントしたくて選んだよ。
-ふわふわのタオルで、毎朝気持ちよく過ごしてね。
-これからも元気でいてくれることが、一番の願いです。</div>
+          <div class="ci-body">お誕生日おめでとう！いつもありがとう！
+これからも変わらず仲良くしてね。たくさんの幸せが訪れますように。</div>
         </div>
         <div class="bd-cs-item" onclick="bdSelectCard(this)">
           <div class="ci-check">✓</div>
@@ -1441,206 +1493,139 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <div class="pv-empty" id="bdPvEmpty">↑ 上から文面を選ぶとここにプレビューが表示されます。</div>
     </div>
     <button class="bd-copy-btn" id="bdCopyBtn" onclick="bdCopy()">📋 文面をコピーして備考欄に貼り付け</button>
-    <div class="bd-note">
-      <strong>【ご注文時のカード文面のお伝え方法】</strong><br>
-      「コピーして備考欄に貼り付け」ボタンを押してから、カート画面の<strong>備考・ご要望欄</strong>にペーストしてください。<br>
-      ・宛名（例：○○様へ）と差出人（例：○○より）も備考欄にご記入ください。<br>
-      ・機種依存文字（♪ ❤️ 絵文字など）は文字化けしますのでご使用をお控えください。<br>
-      ・「！」「♪」はそのままご使用いただけます。ハートは「（ハート）」とご記入ください。
-    </div>
+    <div class="bd-note"><strong>ご注意：</strong>機種依存文字（絵文字など）は文字化けしますのでご使用をお控えください。「！」「♪」はそのままご使用いただけます。ハートは「（ハート）」とご記入ください。</div>
   </div>
 </div>
 
-<!-- ===== カートへの進み方（縦並び・画像付き） ===== -->
-<div class="bd-sec" id="bd-order">
-  <div class="bd-ttl">
-    <span class="en">HOW TO ORDER</span>
-    <h2>カートへの進み方</h2>
-    <p>カードを添えた誕生日ギフトのご注文は、5つのステップで完了します。</p>
-  </div>
-  <div class="bd-accent-line"></div>
-  <div class="bd-howto-steps">
+<!-- ギフトサービス（カード直下） -->
+<div class="bd-sec" id="bd-service" style="background:#f5f2eb;padding-top:0">
+  <div class="bd-inner">
+    <div style="font-size:10px;letter-spacing:.5em;color:#c8593a;font-weight:400;text-transform:uppercase;margin-bottom:20px;padding-top:0">SERVICE — GIFT</div>
+    <div class="bd-service-grid">
+      <div class="bd-reason"><span class="bd-reason-ico">✍️</span><div class="bd-reason-title">名入れ刺繍で世界で一つだけのギフトに</div><div class="bd-reason-desc">お名前・記念日・メッセージを刺繍できます。フォント・糸色・サイズも選べるので、完全に一点ものの贈り物になります。</div></div>
+      <div class="bd-reason"><span class="bd-reason-ico">🎁</span><div class="bd-reason-title">ギフトラッピングが充実</div><div class="bd-reason-desc">簡易ラッピングから箱入り・風呂敷まで4種類をご用意。誕生日専用のバースデーリボンもお選びいただけます。</div></div>
+      <div class="bd-reason"><span class="bd-reason-ico">🧑‍💼</span><div class="bd-reason-title">タオルソムリエが無料でご提案</div><div class="bd-reason-desc">メールやお電話でお気軽にご相談ください。<br><a href="https://www.ikeuchi.org/contact/form/" style="color:#c8593a;font-size:11px;display:inline-block;margin-top:4px">お問い合わせはこちら →</a></div></div>
 
-    <!-- STEP 1 -->
-    <div class="bd-howto-step">
-      <div class="bd-howto-step-left">
-        <div class="bd-howto-step-num">1</div>
-        <div class="bd-howto-step-ico">💌</div>
-      </div>
-      <div class="bd-howto-step-right">
-        <div class="bd-howto-step-title">カードの文面を選ぶ</div>
-        <div class="bd-howto-step-desc">上の「バースデーカードを選ぶ」セクションから定型文をお選びいただくか、オリジナルメッセージをご入力ください。</div>
-        <div class="bd-howto-step-screen">
-          <div class="bd-howto-screen-bar"><div class="bd-howto-screen-dot r"></div><div class="bd-howto-screen-dot y"></div><div class="bd-howto-screen-dot g"></div><div class="bd-howto-screen-url">ikeuchi.org / 誕生日ギフト</div></div>
-          <div class="bd-howto-step-label-bar">STEP 1 ｜ 定型文またはオリジナルを選ぶ</div>
-          <svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#fafafa">
-            <rect x="12" y="12" width="218" height="80" rx="4" fill="#fff" stroke="#e8e4dc" stroke-width="1"/>
-            <rect x="12" y="12" width="218" height="80" rx="4" fill="#fdf0ec" stroke="#c8593a" stroke-width="2"/>
-            <circle cx="204" cy="24" r="10" fill="#c8593a"/>
-            <text x="204" y="28" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">✓</text>
-            <text x="22" y="30" font-size="9" fill="#c8593a" font-weight="600" font-family="sans-serif">CASUAL</text>
-            <text x="22" y="46" font-size="11" fill="#1a1a1a" font-weight="600" font-family="sans-serif">友人・家族へ</text>
-            <text x="22" y="62" font-size="8.5" fill="#666" font-family="sans-serif">お誕生日おめでとう！</text>
-            <text x="22" y="74" font-size="8.5" fill="#666" font-family="sans-serif">毎日使えるものを選んだよ。</text>
-            <text x="22" y="86" font-size="8.5" fill="#666" font-family="sans-serif">ふわふわのタオルで過ごしてね。</text>
-            <rect x="242" y="12" width="226" height="80" rx="4" fill="#fff" stroke="#e8e4dc" stroke-width="1"/>
-            <text x="252" y="30" font-size="9" fill="#888" font-family="sans-serif">FORMAL</text>
-            <text x="252" y="46" font-size="11" fill="#1a1a1a" font-weight="500" font-family="sans-serif">目上の方・ご両親へ</text>
-            <text x="252" y="62" font-size="8.5" fill="#999" font-family="sans-serif">誕生日のお喜びを申し上げます。</text>
-            <text x="252" y="74" font-size="8.5" fill="#999" font-family="sans-serif">いつも温かくご指導いただき…</text>
-            <polygon points="120,100 108,114 132,114" fill="#c8593a"/>
-            <rect x="60" y="114" width="168" height="30" rx="3" fill="#fdf0ec" stroke="#c8593a" stroke-width="1.5"/>
-            <text x="144" y="126" text-anchor="middle" font-size="9" fill="#8b3d26" font-weight="600" font-family="sans-serif">👆 文面をクリックして選択</text>
-            <text x="144" y="138" text-anchor="middle" font-size="8.5" fill="#8b3d26" font-family="sans-serif">オレンジ枠になれば選択完了です</text>
-          </svg>
-        </div>
-      </div>
     </div>
-
-    <!-- STEP 2 -->
-    <div class="bd-howto-step">
-      <div class="bd-howto-step-left">
-        <div class="bd-howto-step-num">2</div>
-        <div class="bd-howto-step-ico">📋</div>
-      </div>
-      <div class="bd-howto-step-right">
-        <div class="bd-howto-step-title">「コピーして備考欄に貼り付け」を押す</div>
-        <div class="bd-howto-step-desc">選んだ文面が自動的にクリップボードにコピーされます。次のステップでカート画面の備考欄に貼り付けて使います。</div>
-        <div class="bd-howto-step-screen">
-          <div class="bd-howto-screen-bar"><div class="bd-howto-screen-dot r"></div><div class="bd-howto-screen-dot y"></div><div class="bd-howto-screen-dot g"></div><div class="bd-howto-screen-url">ikeuchi.org / 誕生日ギフト</div></div>
-          <div class="bd-howto-step-label-bar">STEP 2 ｜ コピーボタンを押す</div>
-          <svg viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#fafafa">
-            <rect x="12" y="14" width="456" height="40" rx="3" fill="#fff" stroke="#e8e4dc" stroke-width="1"/>
-            <text x="24" y="30" font-size="9" fill="#888" font-family="sans-serif">PREVIEW — カードイメージ</text>
-            <text x="24" y="46" font-size="9" fill="#1a1a1a" font-family="sans-serif">【定型文：友人・家族へ】お誕生日おめでとう！毎日使えるものを選んだよ…</text>
-            <rect x="12" y="64" width="240" height="36" rx="2" fill="#4a9a6a"/>
-            <text x="132" y="77" text-anchor="middle" font-size="10" fill="#fff" font-weight="500" font-family="sans-serif">✅ コピーしました！</text>
-            <text x="132" y="91" text-anchor="middle" font-size="9" fill="#fff" font-family="sans-serif">備考欄にペーストしてください</text>
-            <polygon points="132,106 120,118 144,118" fill="#c8593a"/>
-            <rect x="60" y="118" width="260" height="16" rx="3" fill="#fdf0ec" stroke="#c8593a" stroke-width="1.5"/>
-            <text x="190" y="130" text-anchor="middle" font-size="8.5" fill="#8b3d26" font-weight="600" font-family="sans-serif">👆 ボタンが緑になればコピー成功！次のステップへ</text>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 3 -->
-    <div class="bd-howto-step">
-      <div class="bd-howto-step-left">
-        <div class="bd-howto-step-num">3</div>
-        <div class="bd-howto-step-ico">🛒</div>
-      </div>
-      <div class="bd-howto-step-right">
-        <div class="bd-howto-step-title">商品ページで「カートに入れる」を押す</div>
-        <div class="bd-howto-step-desc">ご希望の商品ページに移動して、ラッピングや数量を選んでからカートに入れてください。バースデーラッピングもここで選べます。</div>
-        <div class="bd-howto-step-screen">
-          <div class="bd-howto-screen-bar"><div class="bd-howto-screen-dot r"></div><div class="bd-howto-screen-dot y"></div><div class="bd-howto-screen-dot g"></div><div class="bd-howto-screen-url">ikeuchi.org / 商品ページ</div></div>
-          <div class="bd-howto-step-label-bar">STEP 3 ｜ 商品ページで「カートに入れる」を押す</div>
-          <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#fafafa">
-            <rect x="12" y="12" width="130" height="110" rx="4" fill="#f0eeeb"/>
-            <text x="77" y="72" text-anchor="middle" font-size="10" fill="#aaa" font-family="sans-serif">📦 商品写真</text>
-            <text x="154" y="28" font-size="9" fill="#999" font-family="sans-serif">IKEUCHI ORGANIC</text>
-            <rect x="154" y="33" width="310" height="1.5" fill="#e8e4dc"/>
-            <text x="154" y="50" font-size="13" fill="#1a1a1a" font-weight="600" font-family="sans-serif">オーガニックエアープレミアムギフトセット</text>
-            <text x="154" y="70" font-size="14" fill="#1a1a1a" font-weight="600" font-family="sans-serif">¥11,495</text>
-            <text x="154" y="84" font-size="8" fill="#aaa" font-family="sans-serif">税込・送料別</text>
-            <text x="154" y="100" font-size="9" fill="#555" font-family="sans-serif">ラッピング：</text>
-            <rect x="154" y="105" width="130" height="17" rx="2" fill="#f0eeeb" stroke="#ddd" stroke-width="1"/>
-            <text x="219" y="117" text-anchor="middle" font-size="8.5" fill="#555" font-family="sans-serif">バースデーリボン ¥330</text>
-            <rect x="154" y="132" width="310" height="36" rx="3" fill="#1a1a1a"/>
-            <text x="309" y="155" text-anchor="middle" font-size="13" fill="#fff" font-weight="500" font-family="sans-serif">カートに入れる</text>
-            <polygon points="309,174 297,186 321,186" fill="#c8593a"/>
-            <rect x="200" y="186" width="220" height="10" rx="3" fill="#fdf0ec" stroke="#c8593a" stroke-width="1.5"/>
-            <text x="310" y="194" text-anchor="middle" font-size="8" fill="#8b3d26" font-weight="600" font-family="sans-serif">👆 このボタンを押してカートへ</text>
-          </svg>
-        </div>
-        <div class="bd-howto-callout">🎀 ラッピングの選択欄で「バースデーラッピング」をお選びいただくと、誕生日専用リボン・バッグでお届けします。</div>
-      </div>
-    </div>
-
-    <!-- STEP 4 -->
-    <div class="bd-howto-step">
-      <div class="bd-howto-step-left">
-        <div class="bd-howto-step-num">4</div>
-        <div class="bd-howto-step-ico">📝</div>
-      </div>
-      <div class="bd-howto-step-right">
-        <div class="bd-howto-step-title">カート画面の「備考・ご要望欄」にペーストする</div>
-        <div class="bd-howto-step-desc">カート画面に進んだら、STEP2でコピーした文面を備考欄に貼り付け（ペースト）してください。宛名・差出人もここに追記します。</div>
-        <div class="bd-howto-step-screen">
-          <div class="bd-howto-screen-bar"><div class="bd-howto-screen-dot r"></div><div class="bd-howto-screen-dot y"></div><div class="bd-howto-screen-dot g"></div><div class="bd-howto-screen-url">ikeuchi.org / ショッピングカート</div></div>
-          <div class="bd-howto-step-label-bar">STEP 4 ｜ 備考・ご要望欄にペーストする</div>
-          <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#fafafa">
-            <rect x="12" y="10" width="456" height="48" rx="3" fill="#fff" stroke="#e8e4dc" stroke-width="1"/>
-            <rect x="20" y="18" width="36" height="36" rx="3" fill="#f0eeeb"/>
-            <text x="38" y="40" text-anchor="middle" font-size="9" fill="#aaa" font-family="sans-serif">📦</text>
-            <text x="65" y="28" font-size="9.5" fill="#1a1a1a" font-weight="600" font-family="sans-serif">オーガニックエアープレミアムギフトセット</text>
-            <text x="65" y="40" font-size="8.5" fill="#888" font-family="sans-serif">バースデーリボン / 数量：1</text>
-            <text x="65" y="52" font-size="9.5" fill="#1a1a1a" font-weight="600" font-family="sans-serif">¥11,495</text>
-            <text x="12" y="78" font-size="10" fill="#1a1a1a" font-weight="600" font-family="sans-serif">備考・ご要望欄</text>
-            <text x="12" y="92" font-size="8" fill="#888" font-family="sans-serif">カードの文面・ラッピングのご希望・宛名などをご記入ください</text>
-            <rect x="12" y="98" width="456" height="82" rx="4" fill="#fff" stroke="#c8593a" stroke-width="2"/>
-            <text x="22" y="114" font-size="8" fill="#1a1a1a" font-family="sans-serif">【定型文：友人・家族へ】</text>
-            <text x="22" y="126" font-size="8" fill="#555" font-family="sans-serif">お誕生日おめでとう！毎日使えるものをプレゼントしたくて選んだよ。</text>
-            <text x="22" y="138" font-size="8" fill="#555" font-family="sans-serif">ふわふわのタオルで、毎朝気持ちよく過ごしてね。</text>
-            <text x="22" y="152" font-size="8" fill="#555" font-family="sans-serif">宛名：○○さんへ　差出人：○○より</text>
-            <rect x="22" y="158" width="1.5" height="12" fill="#1a1a1a"/>
-            <polygon points="240,186 228,198 252,198" fill="#c8593a"/>
-            <rect x="120" y="198" width="260" height="16" rx="3" fill="#fdf0ec" stroke="#c8593a" stroke-width="1.5"/>
-            <text x="250" y="210" text-anchor="middle" font-size="8.5" fill="#8b3d26" font-weight="600" font-family="sans-serif">👆 ここにペーストして、宛名・差出人を追記してください</text>
-          </svg>
-        </div>
-        <div class="bd-howto-callout">✏️ 備考欄への記入例：<br>【カード文面】お誕生日おめでとう…（コピーした文面）<br>宛名：○○さんへ　差出人：○○より</div>
-      </div>
-    </div>
-
-    <!-- STEP 5 -->
-    <div class="bd-howto-step">
-      <div class="bd-howto-step-left">
-        <div class="bd-howto-step-num">5</div>
-        <div class="bd-howto-step-ico">✅</div>
-      </div>
-      <div class="bd-howto-step-right">
-        <div class="bd-howto-step-title">そのままご注文手続きへ</div>
-        <div class="bd-howto-step-desc">備考欄への記入が完了したら、通常通りご注文手続きにお進みください。ご注文確定後、カード文面の変更はできませんのでご注意ください。</div>
-        <div class="bd-howto-step-screen">
-          <div class="bd-howto-screen-bar"><div class="bd-howto-screen-dot r"></div><div class="bd-howto-screen-dot y"></div><div class="bd-howto-screen-dot g"></div><div class="bd-howto-screen-url">ikeuchi.org / ご注文手続き</div></div>
-          <div class="bd-howto-step-label-bar">STEP 5 ｜ ご注文手続きへ進む</div>
-          <svg viewBox="0 0 480 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#fafafa">
-            <rect x="12" y="14" width="456" height="38" rx="3" fill="#f7f7f7" stroke="#e8e4dc" stroke-width="1"/>
-            <text x="24" y="29" font-size="9" fill="#555" font-family="sans-serif">小計（税込）</text>
-            <text x="456" y="29" text-anchor="end" font-size="9.5" fill="#1a1a1a" font-weight="600" font-family="sans-serif">¥11,495</text>
-            <text x="24" y="44" font-size="9" fill="#555" font-family="sans-serif">送料</text>
-            <text x="456" y="44" text-anchor="end" font-size="9.5" fill="#1a1a1a" font-family="sans-serif">¥550</text>
-            <rect x="12" y="62" width="456" height="42" rx="3" fill="#1a1a1a"/>
-            <text x="240" y="88" text-anchor="middle" font-size="14" fill="#fff" font-weight="500" font-family="sans-serif">ご注文手続きへ進む</text>
-            <polygon points="240,110 228,120 252,120" fill="#c8593a"/>
-            <rect x="140" y="120" width="200" height="8" rx="3" fill="#fdf0ec"/>
-            <text x="240" y="128" text-anchor="middle" font-size="7.5" fill="#8b3d26" font-weight="600" font-family="sans-serif">👆 こちらから注文手続きへ</text>
-          </svg>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
 <!-- ===== 8. FAQ ===== -->
-<div class="bd-sec" id="bd-faq" style="background:#f5f2eb">
+    </div>
+
+
+<!-- ===== eギフト ===== -->
+<style>
+.eg-step{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-bottom:48px}
+.eg-step-item{text-align:center;padding:32px 20px;position:relative;background:#fff;border:1px solid #e8e4dc}
+.eg-step-item:not(:last-child){border-right:none}
+.eg-step-num{width:32px;height:32px;border-radius:50%;background:#1a1a1a;color:#fff;font-size:13px;font-weight:500;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.eg-step-ico{font-size:28px;margin-bottom:10px}
+.eg-step-title{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:6px;letter-spacing:.03em}
+.eg-step-desc{font-size:11px;color:#888;line-height:1.9;font-weight:300}
+.eg-arrow{position:absolute;top:50%;right:-14px;transform:translateY(-50%);font-size:20px;color:#e8e4dc;z-index:1}
+.eg-scene{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:48px}
+.eg-scene-item{background:#f5f2eb;border-radius:4px;padding:16px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.eg-scene-ico{font-size:20px;flex-shrink:0}
+.eg-scene-title{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:3px;text-align:center}
+.eg-scene-desc{font-size:11px;color:#888;line-height:1.7;font-weight:300;text-align:center}
+.eg-faq{display:flex;flex-direction:column;margin-bottom:48px}
+.eg-faq-item{border-bottom:1px solid #e8e4dc;cursor:pointer}
+.eg-faq-item:first-child{border-top:1px solid #e8e4dc}
+.eg-faq-q{display:flex;align-items:flex-start;justify-content:space-between;padding:15px 4px;gap:12px}
+.eg-faq-q-txt{font-size:13px;color:#1a1a1a;letter-spacing:.03em}
+.eg-faq-q-txt::before{content:'Q.';color:#c8593a;font-weight:500;margin-right:8px}
+.eg-faq-icon{width:22px;height:22px;border:1px solid #ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;color:#888;flex-shrink:0;transition:all .2s}
+.eg-faq-item.open .eg-faq-icon{background:#1a1a1a;color:#fff;border-color:#1a1a1a;transform:rotate(45deg)}
+.eg-faq-a{display:none;padding:0 4px 15px;font-size:12px;color:#666;line-height:2;font-weight:300}
+.eg-faq-a::before{content:'A.';color:#888;font-weight:500;margin-right:8px}
+.eg-faq-item.open .eg-faq-a{display:block}
+.eg-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+@media(max-width:640px){
+  .eg-step{grid-template-columns:1fr}
+  .eg-step-item:not(:last-child){border-right:1px solid #e8e4dc;border-bottom:none}
+  .eg-arrow{display:none}
+  .eg-scene{grid-template-columns:1fr}
+  .eg-cards{grid-template-columns:1fr}
+}
+</style>
+
+<div class="bd-sec" id="bd-egift" style="background:#fff">
   <div class="bd-ttl">
+    <span class="en">E-GIFT</span>
+    <h2>eギフトで<br>当日でも贈れる</h2>
+    <p>URLを送るだけ。相手が自分で受け取り住所を入力するから、<br>住所を知らなくても大丈夫です。</p>
+  </div>
+  <div class="bd-accent-line"></div>
+
+
+
+  <!-- STEP図 -->
+  <h3 style="font-size:14px;font-weight:500;letter-spacing:.08em;color:#1a1a1a;margin-bottom:20px;text-align:center">eギフトの送り方 — 3ステップで完了</h3>
+  <div class="eg-step">
+    <div class="eg-step-item">
+      <div class="eg-step-num">1</div>
+      <div class="eg-step-ico">🛒</div>
+      <div class="eg-step-title">商品を選ぶ</div>
+      <div class="eg-step-desc">eギフト対応商品を<br>カートに入れ<br>eギフトを選択する</div>
+      <span class="eg-arrow">→</span>
+    </div>
+    <div class="eg-step-item">
+      <div class="eg-step-num">2</div>
+      <div class="eg-step-ico">🔗</div>
+      <div class="eg-step-title">URLをコピー</div>
+      <div class="eg-step-desc">購入後に発行される<br>専用URLを<br>コピーする</div>
+      <span class="eg-arrow">→</span>
+    </div>
+    <div class="eg-step-item">
+      <div class="eg-step-num">3</div>
+      <div class="eg-step-ico">💌</div>
+      <div class="eg-step-title">LINEやメールで送る</div>
+      <div class="eg-step-desc">相手がURLを開いて<br>住所を入力するだけ。<br>誕生日当日に3分で完了。</div>
+    </div>
+  </div>
+
+  <!-- こんなシーンに -->
+  <h3 style="font-size:14px;font-weight:500;letter-spacing:.08em;color:#1a1a1a;margin-bottom:16px;text-align:center">こんなシーンにぴったり</h3>
+  <div class="eg-scene" style="max-width:640px;margin-left:auto;margin-right:auto">
+    <div class="eg-scene-item">
+      <div class="eg-scene-ico">✈️</div>
+      <div><div class="eg-scene-title">遠くに住んでいる友人へ</div><div class="eg-scene-desc">住所を聞かなくても大丈夫。URLを送れば相手が自分で受け取り手続きをしてくれます。</div></div>
+    </div>
+    <div class="eg-scene-item">
+      <div class="eg-scene-ico">😊</div>
+      <div><div class="eg-scene-title">住所を聞きにくい関係の方へ</div><div class="eg-scene-desc">職場の同僚や久しぶりに連絡した友人にも気軽に贈れます。</div></div>
+    </div>
+    <div class="eg-scene-item">
+      <div class="eg-scene-ico">⏰</div>
+      <div><div class="eg-scene-title">当日気づいた誕生日に</div><div class="eg-scene-desc">準備し忘れてしまっても大丈夫。今日中に贈ることができます。</div></div>
+    </div>
+    <div class="eg-scene-item">
+      <div class="eg-scene-ico">🎉</div>
+      <div><div class="eg-scene-title">サプライズで贈りたいとき</div><div class="eg-scene-desc">相手が気づいていない誕生日に、突然URLが届く演出もできます。</div></div>
+    </div>
+  </div>
+
+
+
+
+<div style="background:#fff;height:56px"></div>
+<div class="bd-sec" id="bd-faq" style="background:#f5f2eb;padding-top:64px">
+  <div class="bd-ttl" style="margin-bottom:32px">
     <span class="en">FAQ</span>
     <h2>よくある質問</h2>
   </div>
   <div class="bd-accent-line"></div>
   <div class="bd-faq">
-    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">今治タオルとオーガニックタオルの違いは何ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">今治タオルは愛媛県今治市で製造され品質基準を満たしたタオルの総称です。オーガニックタオルは農薬・化学肥料を使わないオーガニックコットンで作られたタオルを指します。IKEUCHI ORGANICのタオルは、その両方を満たす「今治製のオーガニックタオル」です。</div></div>
-    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">誕生日プレゼントにタオルを贈るのは失礼ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">失礼にはあたりません。タオルは実用性が高く、上質なものほど自分では買わないため、誕生日プレゼントとして喜ばれる定番ギフトです。特に今治タオルのような高品質ブランドタオルは、目上の方への贈り物にも適しています。</div></div>
-    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">誕生日プレゼントにのしは必要ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">誕生日ギフトにのしは不要な場合がほとんどですが、ご希望の方にはのしをご用意しております。お誕生日には蝶結びの水引きが一般的です。備考欄にてご指定ください。</div></div>
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">今治タオルとは何ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">今治タオルは愛媛県今治市で製造されたタオルの総称です。今治市内には多くのタオルメーカーが存在し、それぞれがこだわりと独自ノウハウを持ってタオルをつくり続けています。今治タオル工業組合の審査をクリアした商品だけが「今治タオルブランド認定商品」を名乗ることができ、今治タオルのロゴマークをつけることができます。IKEUCHI ORGANICは、多くの定番商品で、今治タオル認定を取得していますが、今治タオル認定ネームタグはポリエステル製なので、あえてつけておりません。<br><a href="https://www.ikeuchi.org/magazine/imabaritowel/" style="color:#c8593a;font-size:11px;display:inline-block;margin-top:6px">詳しくはこちらの記事をご覧ください →</a></div></div>
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">オーガニックタオルとは何ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">遺伝子組換え(GMO)でない種を使い、3年以上農薬、化学肥料を使用していない畑で栽培されたオーガニックコットンを使用したタオルのことです。厳しいEU基準に基づいて第三者機関よりオーガニック認証を取得しています。<br><a href="https://www.ikeuchi.org/about-us/organiccotton/" style="color:#c8593a;font-size:11px;margin-top:6px;display:inline-block">オーガニックコットンについて詳しく見る →</a></div></div>
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">誕生日プレゼントを贈るのにNGなものはありますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">失礼にはあたりません。タオルは実用性が高く、上質なものほど自分では買わないため、誕生日プレゼントとして喜ばれる定番ギフトです。特に今治タオルのような高品質ブランドタオルは、目上の方への贈り物にも適しています。</div></div>
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">誕生日プレゼントにのしは必要ですか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">誕生日ギフトにのしは不要な場合がほとんどですが、ご希望の方にはのしをご用意しております。お誕生日には蝶結びの水引きが一般的です。</div></div>
     <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">名入れ刺繍はいつ頃できますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">ご注文から通常7〜10営業日程度のお時間をいただいております。お急ぎの場合はご注文前にお問い合わせください。</div></div>
     <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">直接相手の住所に送れますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">はい、直接お贈り先様にお届けすることが可能です。その際、納品書などの金額がわかるものは同梱いたしませんのでご安心ください。</div></div>
-    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">メッセージカードの文面は注文後に変更できますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">ご注文確定後の文面変更は承りかねます。ご注文前に内容をよくご確認の上、備考欄にご記入ください。</div></div>
-    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">ラッピングの種類はどのくらいありますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">無料ラッピング・箱入りラッピング・風呂敷ラッピング・コットンヌーボー専用ボックスをご用意しています。誕生日ギフトにはバースデーリボン付きの箱入りラッピングがおすすめです。</div></div>
-    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">タオルソムリエに相談できますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">はい、ZOOMオンラインストアまたはチャットにて無料でご相談いただけます。贈る相手・ご予算・シーンをお伝えいただければ、最適なギフトをご提案します。</div></div>
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">メッセージカードの文面は注文後に変更できますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">梱包・発送前でしたら可能なこともございますので、お問い合わせください。</div></div>
+    <div class="bd-faq-a">無料ラッピング・箱入りラッピング・風呂敷ラッピング・コットンヌーボー専用ボックスをご用意しています。誕生日ギフトにはバースデーリボン付きの箱入りラッピングがおすすめです。</div></div>
+    <div class="bd-faq-item" onclick="bdFaq(this)"><div class="bd-faq-q"><span class="bd-faq-q-text">タオルソムリエに相談できますか？</span><div class="bd-faq-icon">+</div></div><div class="bd-faq-a">可能でございます。メールでお問い合わせください。</div></div>
   </div>
 </div>
 
@@ -1650,7 +1635,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 <div style="background:#fff;height:56px"></div>
 
 <!-- ===== CTA ===== -->
-<div class="bd-cta">
+<div class="bd-cta" style="display:none">
   <span class="bd-cta-en">BIRTHDAY GIFT</span>
   <h2 class="bd-cta-title">大切な贈り物だから。<br>プロがお手伝いいたします。</h2>
   <div style="margin:36px 0"><!-- スライドギャラリー -->
