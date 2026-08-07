@@ -1150,11 +1150,10 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 
   <div class="bd-filter-wrap">
     <div class="bd-filter-title">🎂 誰への誕生日プレゼントですか？</div>
-    <div class="bd-filter-sub">関係性と年代を選ぶと、おすすめのギフトが表示されます（どちらか一方でも可）</div>
+    <div class="bd-filter-sub">関係性または年代を選ぶと、おすすめのギフトが表示されます（どちらか一方でも可）</div>
     <div class="bd-filter-group">
       <span class="bd-filter-label">贈る相手</span>
       <div class="bd-chips" id="relChips">
-        <button class="bd-chip rel-active" data-rel="all" onclick="bdFilter(this,'rel')">すべて</button>
         <button class="bd-chip" data-rel="mother" onclick="bdFilter(this,'rel')">お母さん・お父さん</button>
         <button class="bd-chip" data-rel="partner" onclick="bdFilter(this,'rel')">パートナー</button>
         <button class="bd-chip" data-rel="friend" onclick="bdFilter(this,'rel')">友人・知人</button>
@@ -1165,7 +1164,6 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
     <div class="bd-filter-group">
       <span class="bd-filter-label">年代</span>
       <div class="bd-chips" id="ageChips">
-        <button class="bd-chip age-active" data-age="all" onclick="bdFilter(this,'age')">すべて</button>
         <button class="bd-chip" data-age="20s" onclick="bdFilter(this,'age')">20代</button>
         <button class="bd-chip" data-age="30s" onclick="bdFilter(this,'age')">30代</button>
         <button class="bd-chip" data-age="40s" onclick="bdFilter(this,'age')">40代</button>
@@ -1451,31 +1449,24 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
       <span style="font-size:9px;letter-spacing:.4em;color:#8a8a8d;font-weight:400;text-transform:uppercase;border:1px solid #e8a08c;background:#f2f2f3;padding:3px 10px;border-radius:2px">ORIGINAL CARD</span>
       IKEUCHI ORGANICオリジナルメッセージカード
     </div>
-    <div class="bd-card-faces">
-      <div>
-        <div class="bd-card-face-label">表面</div>
-        <div class="bd-card-front">
-          <div class="bd-card-front-inner">
-            <!-- 黄色タグ（上から垂れ下がる） -->
-            <div class="bd-yellow-tag">I</div>
-            <!-- ロゴ右下 -->
-            <div class="bd-card-logo">IKEUCHI ORGANIC</div>
-          </div>
+  </div>
+
+  <!-- カード表面・裏面イメージ -->
+  <div class="bd-card-faces" style="margin-bottom:32px">
+    <div>
+      <div class="bd-card-face-label">表面</div>
+      <div class="bd-card-front">
+        <div class="bd-card-front-inner">
+          <div class="bd-yellow-tag">I</div>
+          <div class="bd-card-logo">IKEUCHI ORGANIC</div>
         </div>
-        <p class="bd-card-face-note">シンプルなIKEUCHIロゴカード</p>
       </div>
-      <div>
-        <div class="bd-card-face-label">裏面（メッセージ印字）</div>
-        <div class="bd-card-back" id="bdCardBack">
-          <div class="bd-card-back-text" id="bdCardBackText"><span class="bd-card-back-empty">← 左で文面を選ぶとここに印字イメージが表示されます</span></div>
-        </div>
-        <p class="bd-card-face-note">選んだ文面がここに印字されます</p>
-      </div>
+      <p class="bd-card-face-note">IKEUCHIオリジナルカード</p>
     </div>
-    <div class="bd-card-spec">
-      <div class="bd-spec-item"><span class="bd-spec-ico">📏</span><span class="bd-spec-txt">最大文字数：<strong>全角150文字</strong>（半角300文字）</span></div>
-      <div class="bd-spec-item"><span class="bd-spec-ico">📦</span><span class="bd-spec-txt">ギフトボックス内に同封（ご希望で外付けも可）</span></div>
-      <div class="bd-spec-item"><span class="bd-spec-ico">⚠️</span><span class="bd-spec-txt">機種依存文字（絵文字など）は文字化けします</span></div>
+    <div>
+      <div class="bd-card-face-label">裏面（メッセージ印字）</div>
+      <div class="bd-card-back" style="background:#fff;border:1px solid #e4e4e6;border-radius:4px;aspect-ratio:9/6;box-shadow:0 2px 8px rgba(0,0,0,.06)"></div>
+      <p class="bd-card-face-note">選んだ文面が印字されます</p>
     </div>
   </div>
 
@@ -1495,6 +1486,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
           <div class="ci-body">お誕生日おめでとうございます。
 いつもお世話になっているあなたに、心ばかりの贈り物をお届けします。
 どうぞ素敵な一年になりますよう、お祈りしております。</div>
+          <button onclick="navigator.clipboard.writeText(this.closest('.bd-cs-item').querySelector('.ci-body').innerText).then(()=>{this.textContent='✓ コピーしました';setTimeout(()=>{this.textContent='📋 文面をコピーして備考欄に貼り付け'},2000)})" style="margin-top:10px;font-size:11px;padding:7px 16px;background:#f6f6f7;color:#4b4b4d;border:1px solid #d6d6d8;border-radius:2px;cursor:pointer;font-family:inherit;display:block;width:100%">📋 文面をコピーして備考欄に貼り付け</button>
         </div>
         <div class="bd-cs-item" onclick="bdSelectCard(this)">
           <div class="ci-check">✓</div>
@@ -1502,6 +1494,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
           <div class="ci-title">友人・家族へ</div>
           <div class="ci-body">お誕生日おめでとう！いつもありがとう！
 これからも変わらず仲良くしてね。たくさんの幸せが訪れますように。</div>
+          <button onclick="navigator.clipboard.writeText(this.closest('.bd-cs-item').querySelector('.ci-body').innerText).then(()=>{this.textContent='✓ コピーしました';setTimeout(()=>{this.textContent='📋 文面をコピーして備考欄に貼り付け'},2000)})" style="margin-top:10px;font-size:11px;padding:7px 16px;background:#f6f6f7;color:#4b4b4d;border:1px solid #d6d6d8;border-radius:2px;cursor:pointer;font-family:inherit;display:block;width:100%">📋 文面をコピーして備考欄に貼り付け</button>
         </div>
         <div class="bd-cs-item" onclick="bdSelectCard(this)">
           <div class="ci-check">✓</div>
@@ -1511,6 +1504,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
 いつも温かくご指導いただいておりますことに、心より感謝申し上げます。
 ほんの気持ちではございますが、どうぞお受け取りください。
 今後とも変わらぬご健勝をお祈り申し上げます。</div>
+          <button onclick="navigator.clipboard.writeText(this.closest('.bd-cs-item').querySelector('.ci-body').innerText).then(()=>{this.textContent='✓ コピーしました';setTimeout(()=>{this.textContent='📋 文面をコピーして備考欄に貼り付け'},2000)})" style="margin-top:10px;font-size:11px;padding:7px 16px;background:#f6f6f7;color:#4b4b4d;border:1px solid #d6d6d8;border-radius:2px;cursor:pointer;font-family:inherit;display:block;width:100%">📋 文面をコピーして備考欄に貼り付け</button>
         </div>
         <div class="bd-cs-item" onclick="bdSelectCard(this)">
           <div class="ci-check">✓</div>
@@ -1519,6 +1513,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
           <div class="ci-body">今日のあなたへ。
 頑張ってきた毎日の、ご褒美です。
 ふかふかのタオルで、ゆっくりした時間を。</div>
+          <button onclick="navigator.clipboard.writeText(this.closest('.bd-cs-item').querySelector('.ci-body').innerText).then(()=>{this.textContent='✓ コピーしました';setTimeout(()=>{this.textContent='📋 文面をコピーして備考欄に貼り付け'},2000)})" style="margin-top:10px;font-size:11px;padding:7px 16px;background:#f6f6f7;color:#4b4b4d;border:1px solid #d6d6d8;border-radius:2px;cursor:pointer;font-family:inherit;display:block;width:100%">📋 文面をコピーして備考欄に貼り付け</button>
         </div>
       </div>
     </div>
@@ -1529,12 +1524,7 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
         <div class="bd-char-count" id="bdCharCount">0 / 150文字</div>
       </div>
     </div>
-    <div class="bd-preview">
-      <div class="pv-label">PREVIEW — カードイメージ</div>
-      <div class="pv-text" id="bdPvText" style="display:none"></div>
-      <div class="pv-empty" id="bdPvEmpty">↑ 上から文面を選ぶとここにプレビューが表示されます。</div>
-    </div>
-    <button class="bd-copy-btn" id="bdCopyBtn" onclick="bdCopy()">📋 文面をコピーして備考欄に貼り付け</button>
+
     <div class="bd-note"><strong>ご注意：</strong>機種依存文字（絵文字など）は文字化けしますのでご使用をお控えください。「！」「♪」はそのままご使用いただけます。ハートは「（ハート）」とご記入ください。</div>
   </div>
   </div><!-- /max-width:900px -->
@@ -1545,9 +1535,9 @@ IKEUCHI ORGANIC 誕生日ギフト カテゴリページ
   <div class="bd-inner" style="max-width:1080px;margin:0 auto">
     <div style="font-size:10px;letter-spacing:.5em;color:#8a8a8d;font-weight:400;text-transform:uppercase;margin-bottom:24px">SERVICE — GIFT</div>
     <div class="bd-service-grid">
-      <div class="bd-reason"><span class="bd-reason-ico">✍️</span><div class="bd-reason-title">名入れ刺繍で世界で一つだけのギフトに</div><div class="bd-reason-desc">お名前・記念日・メッセージを刺繍できます。フォント・糸色・サイズも選べるので、完全に一点ものの贈り物になります。</div></div>
-      <div class="bd-reason"><span class="bd-reason-ico">🎁</span><div class="bd-reason-title">ギフトラッピングが充実</div><div class="bd-reason-desc">簡易ラッピングから箱入り・風呂敷まで4種類をご用意。</div></div>
-      <div class="bd-reason"><span class="bd-reason-ico">🧑‍💼</span><div class="bd-reason-title">タオルソムリエが無料でご提案</div><div class="bd-reason-desc">メールやお電話でお気軽にご相談ください。<br><a href="https://www.ikeuchi.org/contact/form/" style="color:#8a8a8d;font-size:11px;display:inline-block;margin-top:4px">お問い合わせはこちら →</a></div></div>
+      <div class="bd-reason"><span class="bd-reason-ico">✍️</span><div class="bd-reason-title">名入れ刺繍で世界で一つだけのギフトに</div><div class="bd-reason-desc">お名前・記念日・メッセージを刺繍できます。フォント・糸色・サイズも選べるので、完全に一点ものの贈り物になります。</div><a href="https://www.ikeuchi.org/c/embroidery" style="font-size:11px;color:#4b4b4d;border-bottom:2px solid #f5c300;padding-bottom:1px;text-decoration:none;display:inline-block;margin-top:10px;letter-spacing:.06em">刺繍について詳しく →</a></div>
+      <div class="bd-reason"><span class="bd-reason-ico">🎁</span><div class="bd-reason-title">ギフトラッピングが充実</div><div class="bd-reason-desc">簡易ラッピングから箱入り・風呂敷まで4種類をご用意。</div><a href="https://www.ikeuchi.org/c/wrapping" style="font-size:11px;color:#4b4b4d;border-bottom:2px solid #f5c300;padding-bottom:1px;text-decoration:none;display:inline-block;margin-top:10px;letter-spacing:.06em">ラッピングについて詳しく →</a></div>
+      <div class="bd-reason"><span class="bd-reason-ico">🧑‍💼</span><div class="bd-reason-title">タオルソムリエが無料でご提案</div><div class="bd-reason-desc">メールやお電話でお気軽にご相談ください。<br><a href="https://www.ikeuchi.org/contact/form/" style="color:#4b4b4d;font-size:11px;display:inline-block;margin-top:4px;text-decoration:none;border-bottom:2px solid #f5c300;padding-bottom:1px">お問い合わせはこちら →</a></div></div>
 
     </div>
   </div>
